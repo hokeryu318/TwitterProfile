@@ -15,22 +15,32 @@
 //    return view('welcome');
 //});
 
-Route::get('/', 'TwittLoginController@index')->name('twittlogin');
+Route::get('/', 'SocialAuthTwitterController@index')->name('twittlogin');
+Route::get('/twittlogin', 'SocialAuthTwitterController@twittlogin');
+Route::get('/twittlogin1/{id}', 'SocialAuthTwitterController@twittlogin1');
+Route::get('/logout', 'SocialAuthTwitterController@logout');
 
-Route::get('prof_make', 'ProfmakeController@index')->name('prof_make');
+Route::get('query_view/{id}', 'QueryController@query_sample')->name('query_sample');
 
-Route::get('query_list', 'QueryController@query_list')->name('query.list');
+//query part
+//Route::get('query_view', 'QueryController@query_view')->name('query_view');
+Route::get('twitt_login_modal', 'QueryController@twitt_login_modal')->name('twitt_login_modal');
+Route::get('query_post_modal', 'QueryController@query_post_modal')->name('query_post_modal');
+Route::post('query_post', 'QueryController@query_post')->name('query_post');
 
-Route::get('query_get', 'QueryController@query_get')->name('query.get');
+//interview part
+Route::get('interview', 'InterviewController@interview')->name('interview');
+Route::get('add_interview', 'InterviewController@add_interview')->name('add_interview');
+Route::post('interview', 'InterviewController@interview_finish')->name('interview_finish');
+Route::post('interview_modal', 'InterviewController@interview_modal')->name('interview_modal');
+Route::get('url_copy_modal', 'InterviewController@url_copy_modal')->name('url_copy');
+Route::get('interview_list', 'InterviewController@interview_list')->name('interview_list');
+Route::get('answer_post_modal', 'InterviewController@answer_post_modal')->name('answer_post_modal');
+Route::post('answer_post', 'InterviewController@answer_post')->name('answer_post');
+Route::get('mute_change', 'InterviewController@mute_change')->name('mute_change');
+Route::get('delete_query', 'InterviewController@delete_query')->name('delete_query');
 
-Route::get('query_post', 'QueryController@query_post')->name('query.post');
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Auth::routes();
 
-Route::get('query_view', 'QueryController@query_view')->name('query.view');
-
-Route::get('profile', 'ProfileController@index')->name('profile.index');
-
-Route::get('profile_confirm', 'ProfileController@confirm')->name('profile.confirm');
-
-Route::get('profile_finish', 'ProfileController@finish')->name('profile.finish');
-
-
+Route::get('/home', 'HomeController@index')->name('home');
