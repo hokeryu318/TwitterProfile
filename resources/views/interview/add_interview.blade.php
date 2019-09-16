@@ -2,7 +2,9 @@
 
 <div id="int_input_plz" class="int_input_plz" style="display: none;">インタビューを入力してください</div>
 
-<div class="container-fluid text-center">
+<div id="int_input_finish" class="interview_post" style="display: none;">インタビューが完成しました！</div>
+
+<div class="container text-center">
 
     <div class="row hg-cont-0">
 
@@ -10,25 +12,22 @@
 
         <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
 
-            <span class="it_finish" align="right" onclick="interviewfinish()">完了</span>
+            {{--<span class="it_finish" align="right" id="interviewfinish" onclick="interviewfinish()">完了</span>--}}
+            <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
             <div class="sp-20"></div>
             <div class="interview_top" style="opacity: 0.2;">
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 25px;">
+                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
                     <img src="{{ asset('logo/'.$user->logo) }}" style="position: relative;" />
                     <div class="query_collect">質問を募集</div>
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%;">
-                    <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
-                    <br>
-                    <span style="float: left;margin-left: 10px;">インタビュー数</span>
-                    <span>
-                        @if(count($query_list) >= 5) 5
-                        @else {{ count($query_list) }}
-                        @endif
-                    </span>
-                    <br>
+                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
+                    <div style="width: 120%; margin-bottom: 32px;">
+                        <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
+                        <br>
+                        <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+                    </div>
                     <div class="interview_share">
                         <span><img src="{{ asset('img/share.png') }}"></span>
                         <span>インタビューをシェア</span>
@@ -46,7 +45,7 @@
                     <input type="hidden" id="deleted_ids" name="deleted_ids[]">
                     <div class="field_wrapper" id="field_wrapper">
                         @if($query_list)
-                            @foreach($query_list as $query)
+                            @foreach($query_list as $key => $query)
                                 <div id="add_{{ $query->id }}">
                                     <div class="sp-10"></div>
                                     <div class="row">
@@ -62,7 +61,7 @@
                                         </div>
                                         <div class="sp-20"></div>
                                         <div align="left">
-                                            <textarea type="text" class="fs-15 add_id_textarea" name="answer[]" rows="3">{{ $query->answer }}</textarea>
+                                            <textarea type="text" class="fs-15 add_id_textarea" id="an_{{ $key }}" name="answer[]" rows="3">{{ $query->answer }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +100,7 @@
     <div class="border_bottom1">
         <div align="left">
             <img class="vm" src="{{ asset('logo/'.$user->logo) }}" style="width: 30px;">
-            <input type="text" class="fs-15 add_it_input" value="" name="query_text[]" />
+            <input type="text" class="fs-15 add_it_input query-text" value="" name="query_text[]" />
             <input type="hidden" class="query-id" value="0" name="query_id[]"/>
         </div>
         <div class="sp-20"></div>
@@ -137,6 +136,8 @@
             }
         });
 
+        $('#an_0').focus();
+
     });
 
     var deleted_ids = [];
@@ -149,16 +150,30 @@
         $("#add_"+id).remove();
     }
 
-    function interviewfinish() {
+    // function interviewfinish() {
+    //
+    //     var wrapper = document.getElementById('field_wrapper');
+    //     if(wrapper.innerHTML.length == 97) {//if there is no data
+    //         $('#int_input_plz').fadeIn(2000).fadeOut(5000);
+    //     } else {
+    //         document.interview_finish.submit();
+    //     }
+    // }
 
-        var wrapper = document.getElementById('field_wrapper');
-        if(wrapper.innerHTML.length == 97) {//if there is no data
-            $('#int_input_plz').fadeIn(2000).fadeOut(5000);
+    $('#interviewfinish').on('click', function () {
+
+        var reqlength = $('.query-text').length;
+        // /console.log(reqlength);
+        var value = $('.query-text').filter(function () {
+            return this.value == '';
+        });
+        console.log(value.length);
+        if (value.length >= 2) {
+            $('#int_input_plz').fadeIn(1000).fadeOut(1000);
         } else {
+            $('#int_input_finish').fadeIn(200);
             document.interview_finish.submit();
         }
-
-
-    }
+    });
 
 </script>

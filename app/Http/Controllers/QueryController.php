@@ -49,20 +49,24 @@ class QueryController extends Controller
         return $interview_post_flag;
     }
 
-    public function query_sample($user_id)
+    public function query_sample($md_user_id)
     {
-        if(isset($_SERVER['HTTPS']) &&
-            $_SERVER['HTTPS'] === 'on')
-            $full_url = "https";
-        else
-            $full_url = "http";
 
-        $full_url .= "://";
+        if(strlen($md_user_id) == 32) {
+            if(isset($_SERVER['HTTPS']) &&
+                $_SERVER['HTTPS'] === 'on')
+                $full_url = "https";
+            else
+                $full_url = "http";
 
-        $full_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        //dd($full_url);
+            $full_url .= "://";
 
-        $sample_user_id = User::where('url', $full_url)->pluck('id')->first();
+            $full_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+            $sample_user_id = User::where('url', $full_url)->pluck('id')->first();
+        } else {
+            $sample_user_id = $md_user_id;
+        }
 
         $sample_user = User::find($sample_user_id);
         $sample_query_list = query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
@@ -71,7 +75,11 @@ class QueryController extends Controller
         }
         //dd($sample_query_list);
 
-        return view('query/query_sample')->with(compact('sample_user', 'sample_query_list'));
+        $user_id = request()->session()->get('user_id');
+        $user = user::find($user_id);//dd($user);
+        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+
+        return view('query/query_sample')->with(compact('sample_user', 'sample_query_list', 'user', 'receive_qurery_count'));
     }
 
 }

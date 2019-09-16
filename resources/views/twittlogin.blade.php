@@ -1,6 +1,6 @@
 @include('layout.page_header')
 
-    <div class="container-fluid text-center">
+    <div class="container text-center">
         <div class="row hg-cont">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">

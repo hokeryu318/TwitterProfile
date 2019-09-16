@@ -2,7 +2,7 @@
 
 <div id="interview_post" class="interview_post" style="display: none;">インタビューを送信しました！</div>
 
-<div class="container-fluid text-center">
+<div class="container text-center">
 
     <div class="row hg-cont-0">
 

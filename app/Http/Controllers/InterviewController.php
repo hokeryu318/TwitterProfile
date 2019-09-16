@@ -47,7 +47,8 @@ class InterviewController extends Controller
                     $query_insert->save();
 
                 } else {//update
-                    $query_update = query::where('id', $id)->update(['query' => $arr_query[$key]]);
+                    $query_update1 = query::where('id', $id)->update(['query' => $arr_query[$key]]);
+                    $query_update2 = query::where('id', $id)->update(['answer' => $arr_answer[$key]]);
                 }
             }
         }
@@ -85,18 +86,24 @@ class InterviewController extends Controller
         $current_time = date("Y-m-d H:i:s");
         $user_id = request()->session()->get('user_id');
         $user = User::find($user_id);
-
-        //send query data
-        $send_query_list = query::where('send_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
-        foreach($send_query_list as $sendquery) {
-            $sendquery->logo = User::where('id', $sendquery->receive_user_id)->pluck('logo')->first();
-            $sendquery->duration = $this->differenceInHours($sendquery->created_at, $current_time);
-        }
+        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
         $mute_list = mute::where('user1', $user_id)->pluck('user2')->toArray();
 
+        //send query data
+        $send_query_list = query::where('send_user_id', $user_id)->where('receive_user_id', '<>', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        foreach($send_query_list as $sendquery) {
+            $sendquery->logo = User::where('id', $sendquery->receive_user_id)->pluck('logo')->first();
+            $sendquery->duration = $this->differenceInHours($sendquery->created_at, $current_time);
+            if (in_array($sendquery->send_user_id, $mute_list)) {
+                $sendquery->mute = 1;//mute status
+            } else {
+                $sendquery->mute = 0;//unmute status
+            }
+        }
+
         //receive query data
-        $receive_query_list = query::where('receive_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        $receive_query_list = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
         foreach($receive_query_list as $receivequery) {
             $receivequery->logo = User::where('id', $receivequery->send_user_id)->pluck('logo')->first();
             $receivequery->duration = $this->differenceInHours($receivequery->created_at, $current_time);
@@ -108,33 +115,46 @@ class InterviewController extends Controller
         }
 
         //get all query count
-        $query_count = query::whereNotIn('send_user_id', $mute_list)->where('receive_user_id', $user_id)->get()->count();
+        $query_count = query::whereNotIn('send_user_id', $mute_list)
+            ->where(function($q) use ($user_id) {
+                $q->where('send_user_id', $user_id)
+                    ->orwhere('receive_user_id', $user_id);
+            })->count();
         //dd($receive_query_list);
-        return view('interview/interview_list')->with(compact('user', 'send_query_list', 'receive_query_list', 'query_count'));
+        return view('interview/interview_list')->with(compact('user', 'send_query_list', 'receive_query_list', 'query_count', 'receive_qurery_count'));
     }
 
-    public function answer_post_modal(Request $request)
+//    public function answer_post_modal(Request $request)
+//    {
+//        $logo = $request->logo;
+//        $name = $request->name;
+//        $id = $request->id;
+//        return view('interview/answer_post_modal')->with(compact('logo', 'name', 'id'));
+//    }
+//
+//    public function answer_post(Request $request)
+//    {
+//        $user_id = $request->session()->get('user_id');
+//        $query_id = $request->query_id;
+//        $answer = $request->new_answer;
+//
+//        //update query data
+//        $query = query::find($query_id);
+//        $query->answer = $answer;
+//        $query->save();
+//
+//        $answer_post_flag = 1;
+//
+//        return $answer_post_flag;
+//    }
+
+    public function answer_to_customer(Request $request)
     {
-        $logo = $request->logo;
-        $name = $request->name;
-        $id = $request->id;
-        return view('interview/answer_post_modal')->with(compact('logo', 'name', 'id'));
-    }
+        $query_id = $request->id;
+        $current_time = date("Y-m-d H:i:s");
+        query::where('id', $query_id)->update(['created_at' => $current_time]);
 
-    public function answer_post(Request $request)
-    {
-        $user_id = $request->session()->get('user_id');
-        $query_id = $request->query_id;
-        $answer = $request->new_answer;
-
-        //update query data
-        $query = query::find($query_id);
-        $query->answer = $answer;
-        $query->save();
-
-        $answer_post_flag = 1;
-
-        return $answer_post_flag;
+        return "success";
     }
 
     public function mute_change(Request $request)
@@ -160,12 +180,18 @@ class InterviewController extends Controller
     }
 
     public function get_query_data($url) {
+
         $user_id = request()->session()->get('user_id');
         $user = User::find($user_id);
+        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
         $mute_list = mute::where('user1', $user_id)->pluck('user2')->toArray();
 
-        $query_list_tmp = query::whereNotIn('send_user_id', $mute_list)->where('receive_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        $query_list_tmp = query::whereNotIn('send_user_id', $mute_list)
+                          ->where(function($q) use ($user_id) {
+                              $q->where('send_user_id', $user_id)
+                                ->orwhere('receive_user_id', $user_id);
+                          })->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
         $query_count = $query_list_tmp->count();
         $query_list = $query_list_tmp->take(5);
         foreach($query_list as $query) {
@@ -173,9 +199,9 @@ class InterviewController extends Controller
         }
 
         if($url == 'redirect')
-            return redirect(route('interview'))->with(compact('user', 'query_list', 'query_count'));
+            return redirect(route('interview'))->with(compact('user', 'query_list', 'query_count', 'receive_qurery_count'));
         else
-            return view('interview/'.$url)->with(compact('user', 'query_list', 'query_count'));
+            return view('interview/'.$url)->with(compact('user', 'query_list', 'query_count', 'receive_qurery_count'));
     }
 
     public function get_arr_id($opt) {

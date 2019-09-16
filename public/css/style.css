@@ -101,6 +101,9 @@ body {
         height: 510px;
         overflow-y: auto;
     }
+    .w-1 {
+        width: 185px;
+    }
 }
 
 /* iphone 6/7/8 plus */
@@ -142,6 +145,9 @@ body {
         height: 560px;
         overflow-y: auto;
     }
+    .w-1 {
+        width: 210px;
+    }
 }
 
 /* iphone X */
@@ -182,6 +188,70 @@ body {
     .add_it_cont {
         height: 630px;
         overflow-y: auto;
+    }
+    .w-1 {
+        width: 185px;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #FFF;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 43px;
+        border-left: 0.1px solid #CCC;
+        display: none;
+        z-index: 9;
+    }
+
+    .sidenav a {
+        padding: 15px 8px 15px 20px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid #CCC;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    
+    .menu_none {
+        display: contents;
+    }
+    .se_top_menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 415px) {
+    .menu_none {
+        display: none;
+    }
+    .se_top_menu {
+        color: #858585;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
     }
 }
 
@@ -508,42 +578,43 @@ body {
     vertical-align: middle;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #FFF;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 43px;
-    border-left: 1px solid #CCC;
-    display: none;
-}
+/*.sidenav {*/
+    /*height: 100%;*/
+    /*width: 0;*/
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*background-color: #FFF;*/
+    /*overflow-x: hidden;*/
+    /*transition: 0.5s;*/
+    /*padding-top: 43px;*/
+    /*border-left: 1px solid #CCC;*/
+    /*display: none;*/
+    /*z-index: 9;*/
+/*}*/
 
-.sidenav a {
-    padding: 15px 8px 15px 20px;
-    text-decoration: none;
-    font-size: 15px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    border-bottom: 1px solid #CCC;
-}
+/*.sidenav a {*/
+    /*padding: 15px 8px 15px 20px;*/
+    /*text-decoration: none;*/
+    /*font-size: 15px;*/
+    /*color: #818181;*/
+    /*display: block;*/
+    /*transition: 0.3s;*/
+    /*border-bottom: 1px solid #CCC;*/
+/*}*/
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+/*.sidenav a:hover {*/
+    /*color: #f1f1f1;*/
+/*}*/
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 30px;
-    margin-left: 50px;
-}
+/*.sidenav .closebtn {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 25px;*/
+    /*font-size: 30px;*/
+    /*margin-left: 50px;*/
+/*}*/
 
 .tlm {
     width: 90%;
@@ -677,4 +748,7 @@ body {
     float: right;
     margin-bottom: 20px;
     z-index: 1;
+}
+.display-none {
+    display: none;
 }

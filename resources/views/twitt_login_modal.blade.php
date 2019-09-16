@@ -4,7 +4,7 @@
     <div class="modal-content tlm">
         <div class="modal-header" style="border-bottom: 0px;">
             <div class="col-sm-2"></div>
-            <div class="col-sm-8">
+            <div class="col-sm-8" align="center">
                 <img src="{{ asset('img/man2.png') }}" style="width: 60px;">
             </div>
             <div class="col-sm-2">

@@ -3,30 +3,27 @@
 <div id="answer_post" class="interview_post" style="display: none;">インタビューに答えました。！</div>
 
 <input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
-<div class="container-fluid text-center">
+<div class="container text-center">
 
     <div class="row hg-cont-0">
 
         <div class="col-sm-4"></div>
 
         <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
-            <img class="sticky" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="">
+            <img class="sticky display-none" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="">
 
             <div class="sp-20"></div>
             <div class="interview_top">
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 25px;">
+                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;">
                     <img src="{{ asset('logo/'.$user->logo) }}" style="position: relative;" />
                     <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%;">
-                    <div style="width: 120%">
+                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;margin-right: 6%;">
+                    <div style="width: 120%; margin-bottom: 32px;">
                         <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
                         <br>
-                        <span style="float: left;margin-left: 10px;">インタビュー数</span>
-                        <span>
-                            {{ $query_count }}
-                        </span>
+                        <span style="float: left;margin-left: 10px;">インタビュー数&nbsp;{{ $query_count }}</span>
                     </div>
                     <div class="interview_share" onclick="interview_modal(2)">
                         <span><img src="{{ asset('img/share.png') }}"></span>
@@ -47,19 +44,40 @@
 
                 <div id="query" class="tabcontent">
                     @foreach($receive_query_list as $receive)
-                    <div id="item_{{ $receive->id }}">
+                        <div id="item_{{ $receive->id }}">
                         <div class="sp-40"></div>
                         <div class="border_bottom">
                             <div class="ib vm">
-                                <img src="{{ asset('logo/'.$receive->logo) }}" style="width: 50px;">
+                                <img src="{{ asset('logo/'.$receive->logo) }}" style="width: 50px;" onclick="window.location='{{ url("query_view/".$receive->send_user_id) }}'">
                             </div>
-                            <div class="ib vm" style="width: 70%;">
-                                <div class="fs-12" align="left">{{ $receive->duration }}時間前</div>
+                            <div class="ib vm" style="width: 80%;">
+                                <div class="fs-12" align="left">
+                                    <div class="ib w-1">{{ $receive->duration }}時間前</div>
+                                    <div class="ib" style="font-size: 35px;margin-top: -20px;" onclick="remove_query({{ $receive->id }})">&times;</div>
+                                </div>
                                 <br>
-                                <div align="left">{{ $receive->query }}</div>
+                                @if($receive->mute == 1)
+                                    <div align="left" class="mute_text_info_{{$receive->send_user_id}}">
+                                        ミュート中の為、表示されません
+                                    </div>
+                                    <div align="left" class="mute_text_{{$receive->send_user_id}} display-none">
+                                        {{ $receive->query }}
+                                    </div>
+                                @else
+                                    <div align="left" class="mute_text_info_{{$receive->send_user_id}} display-none">
+                                        ミュート中の為、表示されません
+                                    </div>
+                                    <div align="left" class="mute_text_{{$receive->send_user_id}}">
+                                        {{ $receive->query }}
+                                    </div>
+                                @endif
                                 <br>
                                 <div align="left">
-                                    <span onclick="answer_post_modal('{{ $receive->logo }}', '{{ $receive->name }}', '{{ $receive->id }}')">
+                                    {{--<span onclick="answer_post_modal('{{ $receive->logo }}', '{{ $receive->name }}', '{{ $receive->id }}')">--}}
+                                        {{--<img src="{{ asset('img/mic.png') }}">--}}
+                                        {{--<span class="fs-10">答える</span>--}}
+                                    {{--</span>--}}
+                                    <span onclick="answer_to_customer('{{ $receive->id }}')">
                                         <img src="{{ asset('img/mic.png') }}">
                                         <span class="fs-10">答える</span>
                                     </span>
@@ -71,7 +89,7 @@
                                                  src="{{ asset('img/muted.png') }}"
                                                  data-myval="{{ $receive->mute }}"
                                             >
-                                            <span class="fs-10 mute_text_{{$receive->send_user_id}}">
+                                            <span class="fs-10 mute_info_{{$receive->send_user_id}}">
                                                 ミュート解除
                                             </span>
                                         @else
@@ -80,14 +98,13 @@
                                                  src="{{ asset('img/unmuted.png') }}"
                                                  data-myval="{{ $receive->mute }}"
                                             >
-                                            <span class="fs-10 mute_text_{{$receive->send_user_id}}">
+                                            <span class="fs-10 mute_info_{{$receive->send_user_id}}">
                                                 ミュート
                                             </span>
                                         @endif
                                     </span>
                                 </div>
                             </div>
-                            <div class="ib" style="font-size: 35px;vertical-align: top;margin-top: -20px;" onclick="remove_query({{ $receive->id }})">&times;</div>
                             <div class="sp-40"></div>
                         </div>
                     </div>
@@ -97,33 +114,62 @@
 
                 <div id="send_query" class="tabcontent">
                     @foreach($send_query_list as $send)
-                    <div id="item_{{ $send->id }}">
-                        <div class="sp-40"></div>
-                        <div class="border_bottom">
-                            <div class="ib vm">
-                                <img src="{{ asset('logo/'.$send->logo) }}" style="width: 50px;">
-                            </div>
-                            <div class="ib vm" style="width: 70%;">
-                                <div class="fs-12" align="left">{{ $send->duration }}時間前</div>
-                                <br>
-                                <div align="left">{{ $send->query }}</div>
-                                <br>
-                                <div align="left">
-                                    <span>
-                                        <img src="{{ asset('img/mic.png') }}">
-                                        <span class="fs-10">答える</span>
-                                    </span>
-                                    <span>&nbsp;&nbsp;&nbsp;</span>
-                                    <span>
-                                        <img src="{{ asset('img/unmuted.png') }}">
-                                        <span class="fs-10">ミュート</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="ib" style="font-size: 35px;vertical-align: top;margin-top: -20px;" onclick="remove_query({{ $send->id }})">&times;</div>
+                        <div id="item_{{ $send->id }}">
                             <div class="sp-40"></div>
+                            <div class="border_bottom">
+                                <div class="ib vm">
+                                    <img src="{{ asset('logo/'.$send->logo) }}" style="width: 50px;" onclick="window.location='{{ url("query_view/".$send->receive_user_id) }}'">
+                                </div>
+                                <div class="ib vm" style="width: 80%;">
+                                    <div class="fs-12" align="left">
+                                        <div class="ib w-1">{{ $send->duration }}時間前</div>
+                                        <div class="ib" style="font-size: 35px;margin-top: -20px;" onclick="remove_query({{ $send->id }})">&times;</div>
+                                    </div>
+                                    <br>
+                                    @if($send->mute == 1)
+                                        <div align="left" class="mute_text_info_{{$send->send_user_id}}">
+                                            ミュート中の為、表示されません
+                                        </div>
+                                        <div align="left" class="mute_text_{{$send->send_user_id}} display-none">
+                                            {{ $send->query }}
+                                        </div>
+                                    @else
+                                        <div align="left" class="mute_text_info_{{$send->send_user_id}} display-none">
+                                            ミュート中の為、表示されません
+                                        </div>
+                                        <div align="left" class="mute_text_{{$send->send_user_id}}">
+                                            {{ $send->query }}
+                                        </div>
+                                    @endif
+                                    <br>
+                                    <div align="left">
+                                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        <span class="mute_list" data-id = "{{ $send->send_user_id }}" onclick="mute('{{ $send->receive_user_id }}', '{{ $user->id }}')">
+                                        @if($send->mute == 1)
+                                                <img class="mute_img_{{$send->send_user_id}}"
+                                                     id="mute_{{ $send->send_user_id }}"
+                                                     src="{{ asset('img/muted.png') }}"
+                                                     data-myval="{{ $send->mute }}"
+                                                >
+                                                <span class="fs-10 mute_info_{{$send->send_user_id}}">
+                                                ミュート解除
+                                            </span>
+                                            @else
+                                                <img class="mute_img_{{$send->send_user_id}}"
+                                                     id="mute_{{ $send->send_user_id }}"
+                                                     src="{{ asset('img/unmuted.png') }}"
+                                                     data-myval="{{ $send->mute }}"
+                                                >
+                                                <span class="fs-10 mute_info_{{$send->send_user_id}}">
+                                                ミュート
+                                            </span>
+                                            @endif
+                                    </span>
+                                    </div>
+                                </div>
+                                <div class="sp-40"></div>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
 
@@ -204,17 +250,32 @@
         $("#thirdModal").modal("toggle");
     }
 
-    function answer_post_modal(logo, name, id) {
+    {{--function answer_post_modal(logo, name, id) {--}}
+
+        {{--$.ajax({--}}
+            {{--type:"GET",--}}
+            {{--url:"{{ route('answer_post_modal') }}",--}}
+            {{--data:{logo: logo, name: name, id: id},--}}
+            {{--success: function(result){--}}
+                {{--$('#myModal').html(result);--}}
+            {{--}--}}
+        {{--});--}}
+        {{--$("#myModal").modal("toggle");--}}
+    {{--}--}}
+
+    function answer_to_customer(id) {
 
         $.ajax({
             type:"GET",
-            url:"{{ route('answer_post_modal') }}",
-            data:{logo: logo, name: name, id: id},
+            url:"{{ route('answer_to_customer') }}",
+            data:{id: id},
             success: function(result){
-                $('#myModal').html(result);
+                if(result == "success") {
+                    window.location.href = "{{URL::to('add_interview')}}"
+                }
             }
         });
-        $("#myModal").modal("toggle");
+
     }
 
     function mute(user1, user2) {
@@ -232,17 +293,21 @@
     }
 
     $(document).ready(function() {
-        $(".container-fluid").on("click", ".mute_list", function () {
+        $(".container").on("click", ".mute_list", function () {
 
             var user_id = $(this).attr("data-id");
             var mute_status = $('#mute_' + user_id).data('myval');
             if(mute_status == 1) {
                 $('.mute_img_' + user_id).attr('src', "{{ asset('img/unmuted.png') }}");
-                $('.mute_text_' + user_id).text('ミュート');
+                $('.mute_info_' + user_id).text('ミュート');
+                $('.mute_text_info_' + user_id).css('display', 'none');
+                $('.mute_text_' + user_id).css('display', 'block');
                 $('#mute_' + user_id).data('myval', 0);
             } else {
                 $('.mute_img_' + user_id).attr('src', "{{ asset('img/muted.png') }}");
-                $('.mute_text_' + user_id).text('ミュート解除');
+                $('.mute_info_' + user_id).text('ミュート解除');
+                $('.mute_text_info_' + user_id).css('display', 'block');
+                $('.mute_text_' + user_id).css('display', 'none');
                 $('#mute_' + user_id).data('myval', 1);
             }
 

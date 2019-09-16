@@ -4,7 +4,7 @@
     {{--<div id="interview_post" class="interview_post">インタビューを送信しました！</div>--}}
 {{--@endif--}}
 <input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
-<div class="container-fluid text-center">
+<div class="container text-center">
 
     <div class="row hg-cont-0">
 
@@ -16,25 +16,24 @@
 
             <div class="sp-20"></div>
             <div class="interview_top">
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 25px;">
+
+                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
                     <img src="{{ asset('logo/'.$user->logo) }}" style="position: relative;" />
                     <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%;">
-                    <div style="width: 120%">
+                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
+                    <div style="width: 120%; margin-bottom: 32px;">
                         <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
                         <br>
-                        <span style="float: left;margin-left: 10px;">インタビュー数</span>
-                        <span>
-                            {{ $query_count }}
-                        </span>
+                        <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
                     </div>
                     <div class="interview_share" onclick="interview_modal(2)">
                         <span><img src="{{ asset('img/share.png') }}"></span>
                         <span>インタビューをシェア</span>
                     </div>
                 </div>
+
             </div>
 
             <div class="hg-cont-1">

@@ -11,6 +11,7 @@ class SocialAuthTwitterController extends Controller
     //
     public function index()
     {
+        request()->session()->put('login_flag', 0);
         return view('twittlogin');
     }
 
@@ -34,7 +35,9 @@ class SocialAuthTwitterController extends Controller
             $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
         }
 
-        return view('interview/interview')->with(compact('user', 'query_list', 'query_count'));
+        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+
+        return view('interview/interview')->with(compact('user', 'query_list', 'query_count', 'receive_qurery_count'));
     }
 
     public function twittlogin1($sample_user_id)
@@ -56,7 +59,9 @@ class SocialAuthTwitterController extends Controller
         }
         //dd($query_list);
 
-        return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list'));
+        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+
+        return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
     }
 
     function logout() {

@@ -35,8 +35,9 @@ Route::post('interview', 'InterviewController@interview_finish')->name('intervie
 Route::post('interview_modal', 'InterviewController@interview_modal')->name('interview_modal');
 Route::get('url_copy_modal', 'InterviewController@url_copy_modal')->name('url_copy');
 Route::get('interview_list', 'InterviewController@interview_list')->name('interview_list');
-Route::get('answer_post_modal', 'InterviewController@answer_post_modal')->name('answer_post_modal');
-Route::post('answer_post', 'InterviewController@answer_post')->name('answer_post');
+//Route::get('answer_post_modal', 'InterviewController@answer_post_modal')->name('answer_post_modal');
+//Route::post('answer_post', 'InterviewController@answer_post')->name('answer_post');
+Route::get('answer_to_customer', 'InterviewController@answer_to_customer')->name('answer_to_customer');
 Route::get('mute_change', 'InterviewController@mute_change')->name('mute_change');
 Route::get('delete_query', 'InterviewController@delete_query')->name('delete_query');
 
