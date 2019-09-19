@@ -11,9 +11,13 @@
 |
 */
 
-//Route::get('/', function() {
-//    return view('welcome');
-//});
+Route::get('/authorize', function() {
+
+});
+
+Route::get('/tweet', function() {
+
+});
 
 Route::get('/', 'SocialAuthTwitterController@index')->name('twittlogin');
 Route::get('/twittlogin', 'SocialAuthTwitterController@twittlogin');

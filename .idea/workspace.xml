@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/mute.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Mute.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/query.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Query.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,7 +121,7 @@
           <entry key="dummy" value="30" />
           <entry key="env" value="11" />
           <entry key="html" value="6" />
-          <entry key="php" value="24253" />
+          <entry key="php" value="24257" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -135,7 +129,7 @@
           <entry key="Blade" value="14834" />
           <entry key="CSS" value="2844" />
           <entry key="HTML" value="11" />
-          <entry key="PHP" value="9414" />
+          <entry key="PHP" value="9418" />
           <entry key="PLAIN_TEXT" value="41" />
         </counts>
       </usages-collector>
@@ -164,20 +158,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+            <state relative-caret-position="153">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="544">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
               </folding>
@@ -308,7 +302,6 @@
         <option value="$PROJECT_DIR$/resources/views/query/query_sample.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/answer_post_modal.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/interview.blade.php" />
@@ -317,6 +310,7 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/layout/page_header.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -539,12 +533,12 @@
       <workItem from="1568053413621" duration="49253000" />
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
-      <workItem from="1568452802782" duration="64504000" />
+      <workItem from="1568452802782" duration="65364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384921000" />
+    <option name="totallyTimeSpent" value="385781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,7 +554,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19254279" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19254279" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
@@ -922,20 +916,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
         </state>
       </provider>
     </entry>
