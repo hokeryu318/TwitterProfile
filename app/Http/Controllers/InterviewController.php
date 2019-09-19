@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\User;
-use App\Model\query;
-use App\Model\mute;
+use App\Model\Query;
+use App\Model\Mute;
 
 
 class InterviewController extends Controller
