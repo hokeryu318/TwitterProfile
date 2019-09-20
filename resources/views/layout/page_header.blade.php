@@ -15,6 +15,8 @@
 
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+        <meta property="twitter:image" content="http://pbs.twimg.com/profile_images/1088202672857964549/IO_0O6ZS.jpg" />
+
     </head>
     <body>
         <div class="container text-center">
