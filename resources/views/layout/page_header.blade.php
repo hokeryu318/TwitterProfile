@@ -40,7 +40,7 @@
                         {{--@if(session('login_flag') != 1)--}}
                         @if(!(Auth::check()))
                             {{--<span onclick="window.location='{{ url("/login") }}'">ログイン</span>--}}
-                            <span onclick="window.location='{{ route("/auth/redirect/twitter") }}'">ログイン</span>
+                            <span onclick="window.location='{{ url("/auth/redirect/twitter") }}'">ログイン</span>
                         @else
                             <span onclick="window.location='{{ route("interview_list") }}'">
                                 <img class="" src="{{ asset('img/mic.png') }}">
