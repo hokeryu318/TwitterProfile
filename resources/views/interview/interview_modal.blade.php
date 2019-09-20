@@ -16,18 +16,15 @@
             <div>
                 {{--<div class="twittshare" onclick="window.location='{{ url("/tweet") }}'">--}}
                 <div class="twittshare">
-                    <a
-                            href="https://twitter.com/share"
-                            class="twitter-share-button"
-                            data-text="Some sample text"
-                            data-via="awa.melvine"
-                            data-hashtags="motivation"
-                            data-show-count="false"
-                    >Tweet
-                    </a>
-                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    {{--<span><img src="{{ asset('img/twitter_icon.png') }}"></span>--}}
-                    {{--<span>Twitterでシェア！</span>--}}
+                    <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
+                    <span>
+                        <a href="https://twitter.com/share"
+                           data-text="プロフ作りました "
+                           data-via="{{ $user->name }}"
+                           data-hashtags="motivation"
+                           data-show-count="false">
+                        </a>Twitterでシェア！
+                    </span>
                 </div>
                 <div class="sp-10"></div>
                 <div class="urlcopy" onclick="url_copy()">
@@ -39,5 +36,6 @@
 
 </div>
 
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 

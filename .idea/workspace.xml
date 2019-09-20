@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/interview/interview_modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/interview_modal.blade.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -124,12 +123,12 @@
           <entry key="env" value="31" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="25064" />
+          <entry key="php" value="25179" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="15260" />
+          <entry key="Blade" value="15375" />
           <entry key="CSS" value="2844" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -209,8 +208,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/interview/interview_modal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
+            <state relative-caret-position="119">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -589,12 +588,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="19824000" />
+      <workItem from="1568955535489" duration="20347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428383000" />
+    <option name="totallyTimeSpent" value="428906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,7 +615,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.29147983" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.29147983" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32847533" />
       <window_info anchor="bottom" id="Run" order="6" />
@@ -961,8 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/interview_modal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="99" selection-start-line="27" selection-start-column="99" selection-end-line="27" selection-end-column="99" />
+        <state relative-caret-position="119">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
