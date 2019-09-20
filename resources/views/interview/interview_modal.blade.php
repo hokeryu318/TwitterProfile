@@ -42,7 +42,7 @@
                 $('#myModal').modal('hide');
             }
         });
-        document.location.href = "{{ route(redirect) }}";
+        {{--document.location.href = "{{ route(redirect) }}";--}}
     }
 </script>
 
