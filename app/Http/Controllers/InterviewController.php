@@ -39,8 +39,8 @@ class InterviewController extends Controller
             foreach($arr_id as $key => $id) {
                 if($id == 0) {//insert
                     $query_insert = new query();
-                    $query_insert->send_user_id = request()->session()->get('user_id');
-                    $query_insert->receive_user_id = request()->session()->get('user_id');
+                    $query_insert->send_user_id = Auth::id();;
+                    $query_insert->receive_user_id = Auth::id();
                     $query_insert->query = $arr_query[$key];
                     $query_insert->answer = $arr_answer[$key];
                     $query_insert->is_new = 1;
@@ -71,7 +71,7 @@ class InterviewController extends Controller
             $alert = "募集質問する方法を選択しよう！";
         else
             $alert = "インタビューお疲れ様でした！";
-        $user_id = request()->session()->get('user_id');
+        $user_id = Auth::id();
         $user = User::find($user_id);
         return view('interview/interview_modal')->with(compact('alert', 'user'));
     }
@@ -84,7 +84,7 @@ class InterviewController extends Controller
     public function interview_list()
     {
         $current_time = date("Y-m-d H:i:s");
-        $user_id = request()->session()->get('user_id');
+        $user_id = Auth::id();
         $user = User::find($user_id);
         $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
@@ -181,7 +181,7 @@ class InterviewController extends Controller
 
     public function get_query_data($url) {
 
-        $user_id = request()->session()->get('user_id');
+        $user_id = Auth::id();
         $user = User::find($user_id);
         $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
