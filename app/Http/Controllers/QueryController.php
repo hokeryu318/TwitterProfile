@@ -83,10 +83,8 @@ class QueryController extends Controller
         } else {
             $user = [];
             $receive_qurery_count = 0;
+            request()->session()->put('redirect', url()->current());
         }
-
-
-        request()->session()->put('sample_user_id', $sample_user_id);
 
         return view('query/query_sample')->with(compact('sample_user', 'sample_query_list', 'user', 'receive_qurery_count'));
     }

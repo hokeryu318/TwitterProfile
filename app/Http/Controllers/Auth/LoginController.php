@@ -38,6 +38,7 @@ class LoginController extends Controller
     }
     public function showLoginForm()
     {
+        request()->session()->put('redirect', route('interview'));
         return redirect()->route('twittlogin');
     }
 }
