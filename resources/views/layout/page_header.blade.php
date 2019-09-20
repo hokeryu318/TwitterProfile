@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@jiuhejong" />
-        <meta name="twitter:creator" content="@jiuhejong" />
-        <meta property="og:url" content="https://who-japan.com/query_view/c4ca4238a0b923820dcc509a6f75849b" />
+        <meta name="twitter:site" content="@'{{ $user->name }}'" />
+        <meta name="twitter:creator" content="@'{{ $user->name }}'" />
+        <meta property="og:url" content="'{{ $user->url }}'" />
         <meta property="og:title" content="A Twitter for My Sister" />
         <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
-        <meta property="og:image" content="http://pbs.twimg.com/profile_images/1088202672857964549/IO_0O6ZS.jpg" />
+        <meta property="og:image" content="'{{ $user->logo }}'" />
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--}}
