@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\User;
 use App\Model\Query;
 use App\Model\Mute;
-
+use Thujohn\Twitter\Twitter;
 
 class InterviewController extends Controller
 {
