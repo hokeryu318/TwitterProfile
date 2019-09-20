@@ -14,9 +14,12 @@
                 </div>
                 <div class="sp-1"></div>
                 <div>
-                    {{--<img src="{{ asset('img/man2.png') }}">--}}
-                    {{--<img src="{{ asset('img/man1.png') }}">--}}
-                    <img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;">
+                    @if(!(Auth::check()))
+                        <img src="{{ asset('img/man2.png') }}">
+                        <img src="{{ asset('img/man1.png') }}">
+                    @else
+                        <img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;">
+                    @endif
                 </div>
                 <div class="sp-2"></div>
                 @if(!(Auth::check()))
