@@ -91,7 +91,7 @@
         $.ajax({
             type:"POST",
             url:"{{ route('interview_modal') }}",
-            data:{op: op, _token:"{{ csrf_token() }}"},
+            data:{op: op, redirect:'interview', _token:"{{ csrf_token() }}"},
             success: function(result){
                 $('#myModal').html(result);
             }

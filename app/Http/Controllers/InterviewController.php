@@ -74,7 +74,8 @@ class InterviewController extends Controller
             $alert = "インタビューお疲れ様でした！";
         $user_id = Auth::id();
         $user = User::find($user_id);
-        return view('interview/interview_modal')->with(compact('alert', 'user'));
+        $redirect = request()->redirect;
+        return view('interview/interview_modal')->with(compact('alert', 'user', 'redirect'));
     }
 
     public function url_copy_modal()
@@ -215,6 +216,8 @@ class InterviewController extends Controller
         $user_id = Auth::id();
         $user = User::find($user_id);
         Twitter::postTweet(array('status' =>  $user->url.'?sl='.rand(1, 100), 'format' => 'json'));
-        return redirect()->route('interview');
+
+        $redirect = reguest()->redirect;
+        return redirect()->route($redirect);
     }
 }

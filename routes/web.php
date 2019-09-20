@@ -46,7 +46,7 @@ Route::get('interview_list', 'InterviewController@interview_list')->name('interv
 Route::get('answer_to_customer', 'InterviewController@answer_to_customer')->name('answer_to_customer')->middleware('auth');
 Route::get('mute_change', 'InterviewController@mute_change')->name('mute_change')->middleware('auth');
 Route::get('delete_query', 'InterviewController@delete_query')->name('delete_query')->middleware('auth');
-Route::get('/tweet', 'InterviewController@tweet')->middleware('auth');
+Route::get('/tweet', 'InterviewController@tweet')->name('tweet')->middleware('auth');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Auth::routes();
