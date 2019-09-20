@@ -77,9 +77,15 @@ class QueryController extends Controller
         }
         //dd($sample_query_list);
 
-        $user_id = Auth::id();
-        $user = user::find($user_id);//dd($user);
-        $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+        if(Auth::check() == true) {
+            $user_id = Auth::id();dd($user_id);
+            $user = user::find($user_id);//dd($user);
+            $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+        } else {
+            $user = [];
+            $receive_qurery_count = 0;
+        }
+
 
         request()->session()->put('sample_user_id', $sample_user_id);
 
