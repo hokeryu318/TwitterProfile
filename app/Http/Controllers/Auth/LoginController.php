@@ -38,6 +38,6 @@ class LoginController extends Controller
     }
     public function showLoginForm()
     {
-        return view('twittlogin');
+        return redirect()->route('twittlogin');
     }
 }
