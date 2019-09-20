@@ -72,7 +72,8 @@
             <div class="row" style="border-bottom: 1px solid #CCC;">
                 <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
             </div>
-            @if(session('login_flag') == 1)
+            {{--@if(session('login_flag') == 1)--}}
+            @if(auth()->check())
                 <a href="{{ url('query_view/'.$user->id) }}"><img src="{{ asset('img/home.png') }}" class="vm"><span class="vm" style="margin-left: 10px;padding-top: 15px;">ホーム</span></a>
                 <a href="{{ route('interview_list') }}"><img src="{{ asset('img/mic.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">質問たち</span></a>
                 <a href="{{ route('interview') }}"><img src="{{ asset('img/pen.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">作成・編集</span></a>
