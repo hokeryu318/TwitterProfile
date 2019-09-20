@@ -36,19 +36,7 @@ class SocialAuthTwitterController extends Controller
         //auth()->login($user);
 
         $sample_user_id = request()->session()->get('sample_user_id');
-        if($sample_user_id) {
-
-            $sample_user = User::find($sample_user_id);//dd($user);
-            $sample_query_list = Query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
-            foreach($sample_query_list as $query) {
-                $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
-            }
-
-            $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
-
-            return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
-
-        } else {
+        if($sample_user_id == 0) {
 
             $user = User::find($user_id);
             $mute_list = Mute::where('user1', $user_id)->pluck('user2')->toArray();
@@ -68,6 +56,20 @@ class SocialAuthTwitterController extends Controller
             $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
             return view('interview/interview')->with(compact('user', 'query_list', 'query_count', 'receive_qurery_count'));
+
+        } elseif($sample_user_id > 0) {
+
+            $sample_user = User::find($sample_user_id);//dd($user);
+            $sample_query_list = Query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
+            foreach($sample_query_list as $query) {
+                $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
+            }
+
+            $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+
+            request()->session()->put('sample_user_id', 0);
+
+            return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
         }
 
     }
