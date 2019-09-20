@@ -36,11 +36,11 @@
             <div class="border_bottom">
                 <div align="left">
                     <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
-                    <span class="vm fs-15">{{ $query->query }}</span>
+                    <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
                 </div>
                 <div class="sp-20"></div>
                 <div align="left">
-                    <span class="fs-15" style="padding-left: 20px;">{{ $query->answer }}</span>
+                    <span class="fs-15" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
                 </div>
                 <div class="sp-40"></div>
             </div>

@@ -67,7 +67,7 @@
                                     <div align="left" class="mute_text_info_{{$receive->send_user_id}} display-none">
                                         ミュート中の為、表示されません
                                     </div>
-                                    <div align="left" class="mute_text_{{$receive->send_user_id}}">
+                                    <div align="left" class="mute_text_{{$receive->send_user_id}}" style="word-break: break-all;">
                                         {{ $receive->query }}
                                     </div>
                                 @endif
@@ -137,7 +137,7 @@
                                         <div align="left" class="mute_text_info_{{$send->send_user_id}} display-none">
                                             ミュート中の為、表示されません
                                         </div>
-                                        <div align="left" class="mute_text_{{$send->send_user_id}}">
+                                        <div align="left" class="mute_text_{{$send->send_user_id}}" style="word-break: break-all;">
                                             {{ $send->query }}
                                         </div>
                                     @endif
