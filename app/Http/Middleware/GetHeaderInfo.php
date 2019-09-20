@@ -6,6 +6,8 @@ use Closure;
 use Illuminate\Support\Facades\View;
 use App\Model\User;
 use Illuminate\Support\Facades\Auth;
+use App\Model\Query;
+use App\Model\Mute;
 class GetHeaderInfo
 {
     /**
