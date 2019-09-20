@@ -33,7 +33,7 @@
 
         $.ajax({
             type:"GET",
-            url:"{{ route('/tweet') }}",
+            url:"{{ route('tweet') }}",
             data:{
 
             },
