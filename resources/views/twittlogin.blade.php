@@ -16,15 +16,17 @@
                 <div>
                     {{--<img src="{{ asset('img/man2.png') }}">--}}
                     {{--<img src="{{ asset('img/man1.png') }}">--}}
-                    <img src="{{ $user->logo }}">
+                    <img src="{{ $user->logo }}" style="width: 60px;border-radius: 50%;">
                 </div>
                 <div class="sp-2"></div>
+                @if(!(Auth::check()))
                 <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                         <span>Twitterでログイン</span>
                     </div>
                 </div>
+                @endif
                 <div class="sp-3"></div>
             </div>
             <div class="col-sm-4"></div>
