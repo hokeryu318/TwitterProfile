@@ -123,7 +123,7 @@
           <entry key="env" value="31" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="25788" />
+          <entry key="php" value="25803" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -133,7 +133,7 @@
           <entry key="CSS" value="2844" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="10182" />
+          <entry key="PHP" value="10197" />
           <entry key="PLAIN_TEXT" value="62" />
         </counts>
       </usages-collector>
@@ -219,8 +219,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="674">
-              <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+            <state relative-caret-position="547">
+              <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
               <folding>
                 <element signature="e#40#60#0#PHP" expanded="true" />
               </folding>
@@ -612,12 +612,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="38745000" />
+      <workItem from="1568955535489" duration="38919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447304000" />
+    <option name="totallyTimeSpent" value="447478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1029,8 +1029,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        <state relative-caret-position="547">
+          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
           <folding>
             <element signature="e#40#60#0#PHP" expanded="true" />
           </folding>

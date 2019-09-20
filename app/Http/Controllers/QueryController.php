@@ -77,11 +77,11 @@ class QueryController extends Controller
         }
         //dd($sample_query_list);
 
-        if(Auth::check() == true) {
+        if(Auth::check() == true) {dd('1');
             $user_id = Auth::id();dd($user_id);
             $user = user::find($user_id);//dd($user);
             $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
-        } else {
+        } else {dd('2');
             $user = [];
             $receive_qurery_count = 0;
         }
