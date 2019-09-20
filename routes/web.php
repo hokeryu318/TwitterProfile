@@ -26,7 +26,7 @@ Route::get('/callback/{provider}', 'SocialAuthTwitterController@callback');
 //Route::get('/twittlogin1/{id}', 'SocialAuthTwitterController@twittlogin1');
 Route::get('/logout', 'SocialAuthTwitterController@logout');
 
-Route::get('query_view/{id}', 'QueryController@query_sample')->name('query_sample');
+Route::get('query_view/{id}', 'QueryController@query_sample')->name('query_sample')->middleware('auth');
 
 //query part
 //Route::get('query_view', 'QueryController@query_view')->name('query_view');
