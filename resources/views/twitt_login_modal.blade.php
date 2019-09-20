@@ -16,7 +16,7 @@
         </div>
         <div class="modal-footer" style="display: block;border-top: 0px;margin-bottom: 20px;">
             <div>
-                <div class="twittlogin" onclick="window.location='{{ url("/twittlogin1/".$sample_user_id) }}'">
+                <div class="twittlogin" onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                     <span>Twitterでログイン</span>
                 </div>
