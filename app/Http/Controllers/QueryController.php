@@ -79,6 +79,8 @@ class QueryController extends Controller
         $user = user::find($user_id);//dd($user);
         $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
+        request()->session()->put('sample_user_id', $sample_user_id);
+
         return view('query/query_sample')->with(compact('sample_user', 'sample_query_list', 'user', 'receive_qurery_count'));
     }
 

@@ -62,7 +62,7 @@
             <div class="sp-20"></div>
 
             @if(session('login_flag') != 1)
-                <div onclick="window.location='{{ url("/auth/redirect/twitter/".$sample_user->id) }}'">
+                <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                         <span>Twitterでログイン</span>
