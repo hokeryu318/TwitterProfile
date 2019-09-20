@@ -93,7 +93,7 @@
             url:"{{ route('interview_modal') }}",
             data:{op: op, _token:"{{ csrf_token() }}"},
             success: function(result){
-                $('#myModal').html(result);
+                $('#myModal').modal("hide");
             }
         });
         $("#myModal").modal("toggle");
