@@ -5,11 +5,12 @@
 <div class="container text-center">
 
     <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-            <div id="interview_post" class="interview_post" style="display: none;width: 100%;">インタビューを送信しました！</div>
-        </div>
-        <div class="col-sm-4"></div>
+        <div id="interview_post" class="interview_post" style="display: none;">インタビューを送信しました！</div>
+        {{--<div class="col-sm-4"></div>--}}
+        {{--<div class="col-sm-4">--}}
+            {{----}}
+        {{--</div>--}}
+        {{--<div class="col-sm-4"></div>--}}
     </div>
     <div class="row hg-cont-0">
 
