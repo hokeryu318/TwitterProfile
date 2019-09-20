@@ -35,7 +35,6 @@ class SocialAuthTwitterController extends Controller
         request()->session()->put('user_id', $user_id);
 
         auth()->login($user);
-        dd(Auth::user()->id);
 
         $sample_user_id = request()->session()->get('sample_user_id');
         if($sample_user_id == 0) {

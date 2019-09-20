@@ -26,7 +26,8 @@
                         <span>WHO</span>
                     </div>
                     <div class="top_right">
-                        @if(session('login_flag') != 1)
+                        {{--@if(session('login_flag') != 1)--}}
+                        @if(!(Auth::check()))
                             {{--<span onclick="window.location='{{ url("/login") }}'">ログイン</span>--}}
                             <span>ログイン</span>
                         @else
@@ -53,7 +54,8 @@
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4 border_top">
                     <div class="se_top_menu">
-                    @if(session('login_flag') == 1)
+                    {{--@if(session('login_flag') == 1)--}}
+                    @if(Auth::check())
                         <span style="margin-left: 10px;padding-top: 15px;" onclick="window.location='{{ url('query_view/'.$user->id) }}'">ホーム&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ route("interview_list") }}'">質問たち&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ route("interview") }}'">作成・編集&nbsp;</span>
@@ -70,7 +72,8 @@
             <div class="row" style="border-bottom: 1px solid #CCC;">
                 <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
             </div>
-            @if(session('login_flag') == 1)
+            {{--@if(session('login_flag') == 1)--}}
+            @if(Auth::check())
                 <a href="{{ url('query_view/'.$user->id) }}"><img src="{{ asset('img/home.png') }}" class="vm"><span class="vm" style="margin-left: 10px;padding-top: 15px;">ホーム</span></a>
                 <a href="{{ route('interview_list') }}"><img src="{{ asset('img/mic.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">質問たち</span></a>
                 <a href="{{ route('interview') }}"><img src="{{ asset('img/pen.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">作成・編集</span></a>

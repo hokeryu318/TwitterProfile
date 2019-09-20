@@ -20,13 +20,13 @@
 //});
 Route::get('/', 'SocialAuthTwitterController@index')->name('twittlogin');
 Route::get('/auth/redirect/{provider}', 'SocialAuthTwitterController@redirect');
-Route::get('/callback/{provider}', 'SocialAuthTwitterController@callback')->middleware('auth');
+Route::get('/callback/{provider}', 'SocialAuthTwitterController@callback');
 
 //Route::get('/twittlogin', 'SocialAuthTwitterController@twittlogin');
 //Route::get('/twittlogin1/{id}', 'SocialAuthTwitterController@twittlogin1');
 Route::get('/logout', 'SocialAuthTwitterController@logout');
 
-Route::get('query_view/{id}', 'QueryController@query_sample')->name('query_sample')->middleware('auth');
+Route::get('query_view/{id}', 'QueryController@query_sample')->name('query_sample');
 
 //query part
 //Route::get('query_view', 'QueryController@query_view')->name('query_view');
@@ -35,7 +35,7 @@ Route::get('query_post_modal', 'QueryController@query_post_modal')->name('query_
 Route::post('query_post', 'QueryController@query_post')->name('query_post');
 
 //interview part
-Route::get('interview', 'InterviewController@interview')->name('interview');
+Route::get('interview', 'InterviewController@interview')->name('interview')->middleware('auth');
 Route::get('add_interview', 'InterviewController@add_interview')->name('add_interview');
 Route::post('interview', 'InterviewController@interview_finish')->name('interview_finish');
 Route::post('interview_modal', 'InterviewController@interview_modal')->name('interview_modal');
