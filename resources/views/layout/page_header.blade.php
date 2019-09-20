@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@'{{ $user->name }}'" />
-        <meta name="twitter:creator" content="@'{{ $user->name }}'" />
-        <meta property="og:url" content="'{{ $user->url }}'" />
+        <meta name="twitter:site" content="@'@if(Auth::check()) {{ $user->name }} @endif'" />
+        <meta name="twitter:creator" content="@'@if(Auth::check()) {{ $user->name }} @endif'" />
+        <meta property="og:url" content="'@if(Auth::check()) {{ $user->url }} @endif'" />
         <meta property="og:title" content="A Twitter for My Sister" />
         <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
-        <meta property="og:image" content="'{{ $user->logo }}'" />
+        <meta property="og:image" content="'@if(Auth::check()) {{ $user->logo }} @endif'" />
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--}}
