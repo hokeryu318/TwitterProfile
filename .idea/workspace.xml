@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/interview/interview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/interview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,7 +123,7 @@
           <entry key="env" value="31" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="26274" />
+          <entry key="php" value="26315" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -133,7 +133,7 @@
           <entry key="CSS" value="2844" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="10458" />
+          <entry key="PHP" value="10499" />
           <entry key="PLAIN_TEXT" value="62" />
         </counts>
       </usages-collector>
@@ -177,8 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layout/page_header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+            <state relative-caret-position="398">
+              <caret line="69" column="119" selection-start-line="69" selection-start-column="109" selection-end-line="69" selection-end-column="119" />
             </state>
           </provider>
         </entry>
@@ -207,11 +207,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-346">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="419">
+              <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
               <folding>
                 <element signature="e#40#60#0#PHP" expanded="true" />
               </folding>
@@ -231,7 +231,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/interview/interview.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
@@ -368,11 +368,11 @@
         <option value="$PROJECT_DIR$/resources/views/twittlogin.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/GetHeaderInfo.php" />
         <option value="$PROJECT_DIR$/resources/views/query/query_sample.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/page_header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/interview.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/QueryController.php" />
       </list>
     </option>
   </component>
@@ -642,12 +642,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="47215000" />
+      <workItem from="1568955535489" duration="48232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455774000" />
+    <option name="totallyTimeSpent" value="456791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,7 +669,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.23654708" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.23654708" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32847533" />
       <window_info anchor="bottom" id="Run" order="6" />
@@ -1005,16 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/twittlogin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1022,13 +1012,6 @@
           <folding>
             <element signature="e#771#810#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/interview/interview_modal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1052,13 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout/page_header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="67" lean-forward="true" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/interview_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1070,6 +1046,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="95" column="41" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/interview/interview_modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/page_header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="69" column="119" selection-start-line="69" selection-start-column="109" selection-end-line="69" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="69" column="77" selection-start-line="69" selection-start-column="77" selection-end-line="69" selection-end-column="77" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
