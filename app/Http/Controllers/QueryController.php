@@ -52,19 +52,19 @@ class QueryController extends Controller
 
     public function query_sample($md_user_id)
     {
-        if(strlen($md_user_id) == 32) {
-            if(isset($_SERVER['HTTPS']) &&
-                $_SERVER['HTTPS'] === 'on')
-                $full_url = "https";
-            else
-                $full_url = "http";
+        if(isset($_SERVER['HTTPS']) &&
+            $_SERVER['HTTPS'] === 'on')
+            $full_url = "https";
+        else
+            $full_url = "http";
 
-            $full_url .= "://";
+        $full_url .= "://";
 
-            $full_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $full_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $full_urls = explode('?', $full_url);
+        $full_url = $full_urls[0];
 
-            $sample_user_id = User::where('url', $full_url)->pluck('id')->first();
-        }
+        $sample_user_id = User::where('url', $full_url)->pluck('id')->first();
 
         $sample_user = User::find($sample_user_id);
         $sample_query_list = Query::where('receive_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
