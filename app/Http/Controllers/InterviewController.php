@@ -214,6 +214,7 @@ class InterviewController extends Controller
 
         $user_id = Auth::id();
         $user = User::find($user_id);
-        return Twitter::postTweet(array('status' =>  $user->url.'?sl='.rand(1, 100), 'format' => 'json'));
+        Twitter::postTweet(array('status' =>  $user->url.'?sl='.rand(1, 100), 'format' => 'json'));
+        return redirect()->route('interview');
     }
 }
