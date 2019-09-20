@@ -4,12 +4,19 @@
 
 <div class="container text-center">
 
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div id="interview_post" class="interview_post" style="display: none;">インタビューを送信しました！</div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
     <div class="row hg-cont-0">
 
         <div class="col-sm-4"></div>
 
         <div class="col-sm-4 pl-40 pr-40">
-            <div id="interview_post" class="interview_post" style="display: none;">インタビューを送信しました！</div>
+
             <img class="sticky" align="right" src="{{ asset('img/mic1.png') }}" width="50px" height="50px"
                  @if(Auth::check())
                     onclick="query_post_modal('{{ $sample_user->logo }}', '{{ $sample_user->name }}', '{{ $sample_user->id }}')"
