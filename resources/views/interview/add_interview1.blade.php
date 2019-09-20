@@ -22,7 +22,7 @@
                                     <div class="sp-20"></div>
                                     <div class="border_bottom">
                                         <div>
-                                            <img class="vm" src="{{ asset('logo/'.$query->logo) }}" style="width: 30px;">
+                                            <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius: 50%;">
                                             <input type="text" class="add_it_input" value="{{ $query->query }}" name="query1[]" />
                                             <span class="remove_it" onclick="remove_query('{{ $query->id }}')">&times;</span>
                                         </div>
@@ -36,7 +36,7 @@
                             <div class="sp-20"></div>
                             <div class="border_bottom">
                                 <div>
-                                    <img class="vm" src="{{ asset('logo/'.$user->logo) }}" style="width: 30px;">
+                                    <img class="vm" src="{{ $user->logo }}" style="width: 30px;border-radius: 50%;">
                                     <input type="text" class="add_it_input" value="" name="query[]" />
                                 </div>
                                 <div>

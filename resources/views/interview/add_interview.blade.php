@@ -99,7 +99,7 @@
     <div class="sp-40"></div>
     <div class="border_bottom1">
         <div align="left">
-            <img class="vm" src="{{ asset('logo/'.$user->logo) }}" style="width: 30px;">
+            <img class="vm" src="{{ $user->logo }}" style="width: 30px;">
             <input type="text" class="fs-15 add_it_input query-text" value="" name="query_text[]" />
             <input type="hidden" class="query-id" value="0" name="query_id[]"/>
         </div>

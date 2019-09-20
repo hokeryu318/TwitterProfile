@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/interview/add_interview1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/add_interview1.blade.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,12 +123,12 @@
           <entry key="dummy" value="30" />
           <entry key="env" value="22" />
           <entry key="html" value="6" />
-          <entry key="php" value="24473" />
+          <entry key="php" value="24520" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="14852" />
+          <entry key="Blade" value="14899" />
           <entry key="CSS" value="2844" />
           <entry key="HTML" value="11" />
           <entry key="PHP" value="9616" />
@@ -141,16 +142,16 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="2" />
           <entry key="json" value="1" />
-          <entry key="php" value="170" />
+          <entry key="php" value="173" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="113" />
+          <entry key="Blade" value="115" />
           <entry key="CSS" value="14" />
           <entry key="HTML" value="2" />
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="57" />
+          <entry key="PHP" value="58" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -170,13 +171,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+            <state relative-caret-position="473">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InterviewController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview1.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -216,8 +251,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>answer_post_modal</find>
-      <find>answer_post</find>
       <find>mute_text_</find>
       <find>mute_info</find>
       <find>window.locatio</find>
@@ -246,6 +279,8 @@
       <find>new query</find>
       <find>query</find>
       <find>session()-&gt;g</find>
+      <find>interview_l</find>
+      <find>asset('logo</find>
     </findStrings>
     <replaceStrings>
       <replace>fs-15</replace>
@@ -263,7 +298,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/query_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/profmake.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
@@ -300,7 +334,6 @@
         <option value="$PROJECT_DIR$/resources/views/query/query_post_modal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/answer_post_modal.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" />
-        <option value="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/interview_list.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/Model/User.php" />
@@ -314,6 +347,8 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/query/query_sample.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" />
+        <option value="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/interview/add_interview1.blade.php" />
       </list>
     </option>
   </component>
@@ -573,12 +608,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="7254000" />
+      <workItem from="1568955535489" duration="8896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415813000" />
+    <option name="totallyTimeSpent" value="417455000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -684,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="98" column="5" selection-start-line="63" selection-start-column="4" selection-end-line="98" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -771,13 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
           <caret line="230" column="52" lean-forward="true" selection-start-line="230" selection-start-column="52" selection-end-line="230" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -867,16 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InterviewController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -924,10 +935,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        <state relative-caret-position="473">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InterviewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="106" column="55" lean-forward="true" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="71" selection-start-line="38" selection-start-column="71" selection-end-line="38" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
