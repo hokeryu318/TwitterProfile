@@ -10,12 +10,12 @@ use Illuminate\Http\Request;
 class QueryController extends Controller
 {
     //
-    public function query_view()
-    {
-        $login_flag = request()->session()->get('login_flag');
-        $interview_post_flag = 0;
-        return view('query/query_view')->with(compact('login_flag', 'interview_post_flag'));
-    }
+//    public function query_view()
+//    {
+//        $login_flag = request()->session()->get('login_flag');
+//        $interview_post_flag = 0;
+//        return view('query/query_view')->with(compact('login_flag', 'interview_post_flag'));
+//    }
 
     public function twitt_login_modal(Request $request)
     {

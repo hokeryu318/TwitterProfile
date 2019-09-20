@@ -14,7 +14,6 @@ class SocialAuthTwitterController extends Controller
     //
     public function index()
     {
-        request()->session()->put('login_flag', 0);
         return view('twittlogin');
     }
 
@@ -31,7 +30,6 @@ class SocialAuthTwitterController extends Controller
         $user = $this->register_user($getInfo, $provider);
 	    $user_id = $user->id;
 
-	    request()->session()->put('login_flag', 1);
         request()->session()->put('user_id', $user_id);
 
         auth()->login($user);
@@ -84,7 +82,6 @@ class SocialAuthTwitterController extends Controller
 
         $user_id = $this->register_user($user_email, $user_name, $profile_name);
 
-        request()->session()->put('login_flag', 1);
         request()->session()->put('user_id', $user_id);
 //        $user_id = request()->session()->get('user_id');
 
@@ -109,7 +106,6 @@ class SocialAuthTwitterController extends Controller
 
         $user_id = $this->register_user($user_email, $user_name, $profile_name);
         $user = User::find($user_id);
-        request()->session()->put('login_flag', 1);
         request()->session()->put('user_id', $user_id);
 
         $sample_user = User::find($sample_user_id);//dd($user);
@@ -125,7 +121,6 @@ class SocialAuthTwitterController extends Controller
     }
 
     function logout() {
-        request()->session()->put('login_flag', 0);
         return view('twittlogin');
     }
 }
