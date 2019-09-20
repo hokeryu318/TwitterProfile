@@ -196,7 +196,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
+            <state relative-caret-position="469">
               <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
@@ -632,12 +632,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="29837000" />
+      <workItem from="1568955535489" duration="29918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438396000" />
+    <option name="totallyTimeSpent" value="438477000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -653,13 +653,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19498777" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19498777" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.2679372" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.2679372" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32847533" />
       <window_info anchor="bottom" id="Run" order="6" />
@@ -1038,7 +1038,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
+        <state relative-caret-position="469">
           <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
