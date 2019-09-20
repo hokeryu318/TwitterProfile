@@ -208,4 +208,9 @@ class InterviewController extends Controller
         $arr = explode(",", $opt[0]);
         return $arr;
     }
+
+    public function tweet() {
+
+        return Twitter::postTweet(array('status' => 'Laravel Tweet.', 'format' => 'json'));
+    }
 }

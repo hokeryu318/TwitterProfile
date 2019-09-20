@@ -14,7 +14,7 @@
         </div>
         <div class="modal-footer" style="display: block;border-top: 0px;margin-bottom: 20px;">
             <div>
-                <div class="twittshare" onclick="window.location='#'">
+                <div class="twittshare" onclick="window.location='{{ url("/tweet") }}'">
                     <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                     <span>Twitterでシェア！</span>
                 </div>

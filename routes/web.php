@@ -47,6 +47,7 @@ Route::get('interview_list', 'InterviewController@interview_list')->name('interv
 Route::get('answer_to_customer', 'InterviewController@answer_to_customer')->name('answer_to_customer');
 Route::get('mute_change', 'InterviewController@mute_change')->name('mute_change');
 Route::get('delete_query', 'InterviewController@delete_query')->name('delete_query');
+Route::get('/tweet', 'InterviewController@tweet');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Auth::routes();
