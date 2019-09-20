@@ -22,8 +22,8 @@
                            data-text="プロフ作りました "
                            data-via="{{ $user->name }}"
                            data-hashtags="motivation"
-                           data-show-count="false">
-                        </a>Twitterでシェア！
+                           data-show-count="false">Twitterでシェア！
+                        </a>
                     </span>
                 </div>
                 <div class="sp-10"></div>
