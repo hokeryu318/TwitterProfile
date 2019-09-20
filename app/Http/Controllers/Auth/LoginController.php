@@ -40,8 +40,4 @@ class LoginController extends Controller
     {
         return redirect()->route('twittlogin');
     }
-//    public function logout()
-//    {
-//        return redirect()->route('twittlogin');
-//    }
 }

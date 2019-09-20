@@ -37,40 +37,24 @@ class SocialAuthTwitterController extends Controller
         $sample_user_id = request()->session()->get('sample_user_id');
         if($sample_user_id == 0) {
 
-//            $user = User::find($user_id);
-//            $mute_list = Mute::where('user1', $user_id)->pluck('user2')->toArray();
-//
-//            $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)
-//                ->where(function($q) use ($user_id) {
-//                    $q->where('send_user_id', $user_id)
-//                        ->orwhere('receive_user_id', $user_id);
-//                })->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
-//
-//            $query_count = $query_list_tmp->count();
-//            $query_list = $query_list_tmp->take(5);
-//            foreach($query_list as $query) {
+            return redirect()->route('interview');
+
+        } elseif($sample_user_id > 0) {
+
+//            $sample_user = User::find($sample_user_id);//dd($user);
+//            $sample_query_list = Query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
+//            foreach($sample_query_list as $query) {
 //                $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
 //            }
 //
 //            $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 //
-//            return view('interview/interview')->with(compact('user', 'query_list', 'query_count', 'receive_qurery_count'));
+//            request()->session()->put('sample_user_id', 0);
+//
+//            return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
 
-            return redirect()->route('interview');
-
-        } elseif($sample_user_id > 0) {
-
-            $sample_user = User::find($sample_user_id);//dd($user);
-            $sample_query_list = Query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
-            foreach($sample_query_list as $query) {
-                $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
-            }
-
-            $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
-
-            request()->session()->put('sample_user_id', 0);
-
-            return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
+            $md_user_id = md5($sample_user_id);
+            return redirect()->url('query_sample/'.$md_user_id);
         }
 
     }
