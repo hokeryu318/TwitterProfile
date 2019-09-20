@@ -3,9 +3,9 @@
 
 
 <div class="container text-center">
-
+    <div id="interview_post" class="interview_post" style="display: none;">インタビューを送信しました！</div>
     <div class="row">
-        <div id="interview_post" class="interview_post" style="display: none;">インタビューを送信しました！</div>
+
         {{--<div class="col-sm-4"></div>--}}
         {{--<div class="col-sm-4">--}}
             {{----}}
