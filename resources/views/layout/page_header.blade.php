@@ -26,7 +26,8 @@
                         <span>WHO</span>
                     </div>
                     <div class="top_right">
-                        @if(session('login_flag') != 1)
+                        {{--@if(session('login_flag') != 1)--}}
+                        @if(!auth()->check())
                             {{--<span onclick="window.location='{{ url("/login") }}'">ログイン</span>--}}
                             <span>ログイン</span>
                         @else
@@ -53,7 +54,8 @@
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4 border_top">
                     <div class="se_top_menu">
-                    @if(session('login_flag') == 1)
+                    {{--@if(session('login_flag') == 1)--}}
+                    @if(auth()->check())
                         <span style="margin-left: 10px;padding-top: 15px;" onclick="window.location='{{ url('query_view/'.$user->id) }}'">ホーム&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ route("interview_list") }}'">質問たち&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ route("interview") }}'">作成・編集&nbsp;</span>
