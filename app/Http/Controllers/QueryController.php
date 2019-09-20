@@ -52,7 +52,7 @@ class QueryController extends Controller
 
     public function query_sample($md_user_id)
     {
-
+        dd('asd');
         if(strlen($md_user_id) == 32) {
             if(isset($_SERVER['HTTPS']) &&
                 $_SERVER['HTTPS'] === 'on')
@@ -77,11 +77,11 @@ class QueryController extends Controller
         }
         //dd($sample_query_list);
 
-        if(Auth::check() == true) {dd('1');
-            $user_id = Auth::id();dd($user_id);
+        if(Auth::check() == true) {
+            $user_id = Auth::id();
             $user = user::find($user_id);//dd($user);
             $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
-        } else {dd('2');
+        } else {
             $user = [];
             $receive_qurery_count = 0;
         }
