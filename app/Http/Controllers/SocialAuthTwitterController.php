@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Socialite;
 use App\Model\User;
 use App\Model\Query;
@@ -32,7 +33,7 @@ class SocialAuthTwitterController extends Controller
 
 	    request()->session()->put('login_flag', 1);
         request()->session()->put('user_id', $user_id);
-
+        dd(Auth::user()->id);
         //auth()->login($user);
 
         $sample_user_id = request()->session()->get('sample_user_id');
