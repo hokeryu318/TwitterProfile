@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Query;
 use App\Model\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class QueryController extends Controller
@@ -76,13 +77,13 @@ class QueryController extends Controller
         }
         //dd($sample_query_list);
 
-//        $user_id = request()->session()->get('user_id');
-//        $user = user::find($user_id);//dd($user);
-//        $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+        $user_id = Auth::id();
+        $user = user::find($user_id);//dd($user);
+        $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
         request()->session()->put('sample_user_id', $sample_user_id);
 
-        return view('query/query_sample')->with(compact('sample_user', 'sample_query_list', 'receive_qurery_count'));
+        return view('query/query_sample')->with(compact('sample_user', 'sample_query_list', 'user', 'receive_qurery_count'));
     }
 
 }

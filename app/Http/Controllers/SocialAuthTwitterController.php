@@ -36,6 +36,7 @@ class SocialAuthTwitterController extends Controller
         auth()->login($user);
 
         $sample_user_id = request()->session()->get('sample_user_id');
+
         if($sample_user_id == 0) {
 
             return redirect()->route('interview');
