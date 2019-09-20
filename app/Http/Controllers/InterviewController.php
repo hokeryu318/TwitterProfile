@@ -212,6 +212,8 @@ class InterviewController extends Controller
 
     public function tweet() {
 
-        return Twitter::postTweet(array('status' => '<a>Laravel Tweet11.</a>', 'format' => 'html'));
+        $user_id = Auth::id();
+        $user = User::find($user_id);
+        return Twitter::postTweet(array('status' =>  $user->url, 'format' => 'json'));
     }
 }
