@@ -10,7 +10,7 @@
 
         <div class="col-sm-4 pl-40 pr-40">
             <img class="sticky" align="right" src="{{ asset('img/mic1.png') }}" width="50px" height="50px"
-                 @if(session('login_flag') == 1)
+                 @if(Auth::check())
                     onclick="query_post_modal('{{ $sample_user->logo }}', '{{ $sample_user->name }}', '{{ $sample_user->id }}')"
                  @else
                     onclick="twitt_login_modal({{ $sample_user->id }})"
