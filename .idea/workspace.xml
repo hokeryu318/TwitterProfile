@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -124,7 +123,7 @@
           <entry key="env" value="31" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="25544" />
+          <entry key="php" value="25565" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -133,7 +132,7 @@
           <entry key="CSS" value="2844" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="10061" />
+          <entry key="PHP" value="10082" />
           <entry key="PLAIN_TEXT" value="61" />
         </counts>
       </usages-collector>
@@ -168,7 +167,7 @@
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="28" column="74" lean-forward="true" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
+              <caret line="28" column="22" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -197,8 +196,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+            <state relative-caret-position="192">
+              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -624,12 +623,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="31795000" />
+      <workItem from="1568955535489" duration="31998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440354000" />
+    <option name="totallyTimeSpent" value="440557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1007,13 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="74" lean-forward="true" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QueryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1034,10 +1026,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+        <state relative-caret-position="192">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>

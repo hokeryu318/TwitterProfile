@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Socialite;
 use App\Model\User;
 use App\Model\Query;
@@ -54,7 +55,7 @@ class SocialAuthTwitterController extends Controller
 //            return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
 
             $md_user_id = md5($sample_user_id);
-            return redirect()->url('query_sample/'.$md_user_id);
+            return Redirect::to('query_view/'.$md_user_id);
         }
 
     }
