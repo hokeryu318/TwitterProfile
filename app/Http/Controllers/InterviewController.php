@@ -211,17 +211,6 @@ class InterviewController extends Controller
 
     public function tweet() {
 
-        $tweets = Twitter::getUserTimeline(array('screen_name' => 'vegibit', 'count' => 20, 'format' => 'object'));
-
-        foreach($tweets as $tweet){
-
-            echo '<a href="#">aaa</a>';
-
-            echo '<b>Tweet Text:</b> '.Twitter::linkify($tweet->text).'<br>';
-            echo '<strong>Posted By:</strong> <a href="http:'.Twitter::linkUser($tweet->user).
-                '">'.$tweet->user->name.'</a> <em>'.Twitter::ago($tweet->created_at).'</em><br>';
-            echo '<strong>Original Tweet:</strong> <a href="http:'.Twitter::linkTweet($tweet).
-                '">http:'.Twitter::linkTweet($tweet).'</a><hr>';
-        }
+        return Twitter::postTweet(array('status' => 'Laravel Tweet.', 'format' => 'json'));
     }
 }

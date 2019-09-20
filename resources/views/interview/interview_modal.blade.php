@@ -14,17 +14,9 @@
         </div>
         <div class="modal-footer" style="display: block;border-top: 0px;margin-bottom: 20px;">
             <div>
-                {{--<div class="twittshare" onclick="window.location='{{ url("/tweet") }}'">--}}
-                <div class="twittshare">
+                <div class="twittshare" onclick="window.location='{{ url("/tweet") }}'">
                     <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
-                    <span>
-                        <a href="https://twitter.com/share"
-                           data-text="プロフ作りました "
-                           data-via="{{ $user->name }}"
-                           data-hashtags="motivation"
-                           data-show-count="false">Twitterでシェア！
-                        </a>
-                    </span>
+                    <span>Twitterでシェア！</span>
                 </div>
                 <div class="sp-10"></div>
                 <div class="urlcopy" onclick="url_copy()">
@@ -36,6 +28,5 @@
 
 </div>
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
