@@ -47,8 +47,8 @@ class InterviewController extends Controller
                     $query_insert->save();
 
                 } else {//update
-                    $query_update1 = query::where('id', $id)->update(['query' => $arr_query[$key]]);
-                    $query_update2 = query::where('id', $id)->update(['answer' => $arr_answer[$key]]);
+                    $query_update1 = Query::where('id', $id)->update(['query' => $arr_query[$key]]);
+                    $query_update2 = Query::where('id', $id)->update(['answer' => $arr_answer[$key]]);
                 }
             }
         }
@@ -58,7 +58,7 @@ class InterviewController extends Controller
         if($deleted_ids[0] != null) {
 
             $deleted_arr = $this->get_arr_id($deleted_ids);//dd($deleted_arr);
-            $query_delete = query::whereIn('id', $deleted_arr)->delete();
+            $query_delete = Query::whereIn('id', $deleted_arr)->delete();
         }
 
         return $this->get_query_data('redirect');
@@ -86,12 +86,12 @@ class InterviewController extends Controller
         $current_time = date("Y-m-d H:i:s");
         $user_id = request()->session()->get('user_id');
         $user = User::find($user_id);
-        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+        $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
-        $mute_list = mute::where('user1', $user_id)->pluck('user2')->toArray();
+        $mute_list = Mute::where('user1', $user_id)->pluck('user2')->toArray();
 
         //send query data
-        $send_query_list = query::where('send_user_id', $user_id)->where('receive_user_id', '<>', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        $send_query_list = Query::where('send_user_id', $user_id)->where('receive_user_id', '<>', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
         foreach($send_query_list as $sendquery) {
             $sendquery->logo = User::where('id', $sendquery->receive_user_id)->pluck('logo')->first();
             $sendquery->duration = $this->differenceInHours($sendquery->created_at, $current_time);
@@ -103,7 +103,7 @@ class InterviewController extends Controller
         }
 
         //receive query data
-        $receive_query_list = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        $receive_query_list = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
         foreach($receive_query_list as $receivequery) {
             $receivequery->logo = User::where('id', $receivequery->send_user_id)->pluck('logo')->first();
             $receivequery->duration = $this->differenceInHours($receivequery->created_at, $current_time);
@@ -115,7 +115,7 @@ class InterviewController extends Controller
         }
 
         //get all query count
-        $query_count = query::whereNotIn('send_user_id', $mute_list)
+        $query_count = Query::whereNotIn('send_user_id', $mute_list)
             ->where(function($q) use ($user_id) {
                 $q->where('send_user_id', $user_id)
                     ->orwhere('receive_user_id', $user_id);
@@ -139,7 +139,7 @@ class InterviewController extends Controller
 //        $answer = $request->new_answer;
 //
 //        //update query data
-//        $query = query::find($query_id);
+//        $query = Query::find($query_id);
 //        $query->answer = $answer;
 //        $query->save();
 //
@@ -152,7 +152,7 @@ class InterviewController extends Controller
     {
         $query_id = $request->id;
         $current_time = date("Y-m-d H:i:s");
-        query::where('id', $query_id)->update(['created_at' => $current_time]);
+        Query::where('id', $query_id)->update(['created_at' => $current_time]);
 
         return "success";
     }
@@ -164,30 +164,30 @@ class InterviewController extends Controller
         $mute = $request->mute;
 
         if($mute == 0) {
-            $mute = new mute();
+            $mute = new Mute();
             $mute->user1 = $user1;
             $mute->user2 = $user2;
             $mute->save();
         } else {
-            $mute = mute::where('user1', $user1)->where('user2', $user2)->delete();
+            $mute = Mute::where('user1', $user1)->where('user2', $user2)->delete();
         }
     }
 
     public function delete_query(Request $request)
     {
         $query_id = $request->query_id;
-        query::where('id', $query_id)->delete();
+        Query::where('id', $query_id)->delete();
     }
 
     public function get_query_data($url) {
 
         $user_id = request()->session()->get('user_id');
         $user = User::find($user_id);
-        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+        $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
-        $mute_list = mute::where('user1', $user_id)->pluck('user2')->toArray();
+        $mute_list = Mute::where('user1', $user_id)->pluck('user2')->toArray();
 
-        $query_list_tmp = query::whereNotIn('send_user_id', $mute_list)
+        $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)
                           ->where(function($q) use ($user_id) {
                               $q->where('send_user_id', $user_id)
                                 ->orwhere('receive_user_id', $user_id);

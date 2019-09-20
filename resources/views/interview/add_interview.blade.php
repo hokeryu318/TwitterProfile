@@ -18,7 +18,7 @@
             <div class="sp-20"></div>
             <div class="interview_top" style="opacity: 0.2;">
                 <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
-                    <img src="{{ asset('logo/'.$user->logo) }}" style="position: relative;" />
+                    <img src="{{ $user->logo }}" class="avatar" />
                     <div class="query_collect">質問を募集</div>
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="border_bottom1">
                                         <div align="left">
-                                            <img class="vm" src="{{ asset('logo/'.$query->logo) }}" style="width: 30px;">
+                                            <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
                                             <input type="text" class="fs-15 add_it_input query-text" value="{{ $query->query }}" name="query_text[]" />
                                             <input type="hidden" class="query-id" value="{{ $query->id }}" name="query_id[]"/>
                                         </div>

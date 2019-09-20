@@ -43,5 +43,10 @@ return [
             'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
         ],
     ],
+    'twitter' => [
+        'client_id' => 'nDEZIDlaDaKNGONZXboFVMjrn',
+        'client_secret' => 'dptzcDhwgDgGIBqvTNVlKc2keEOaaeB5YEkTHNcRuM0UxUkcDY',
+        'redirect' => 'https://who-japan.com/callback/twitter',
+    ],	
 
 ];

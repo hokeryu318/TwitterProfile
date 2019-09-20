@@ -38,7 +38,7 @@ class QueryController extends Controller
         $query = $request->new_query;
 
         //insert query data
-        $query_list = new query();
+        $query_list = new Query();
         $query_list->send_user_id = $user_id;
         $query_list->receive_user_id = $sample_user_id;
         $query_list->query = $query;
@@ -69,7 +69,7 @@ class QueryController extends Controller
         }
 
         $sample_user = User::find($sample_user_id);
-        $sample_query_list = query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
+        $sample_query_list = Query::where('send_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
         foreach($sample_query_list as $query) {
             $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
         }
@@ -77,7 +77,7 @@ class QueryController extends Controller
 
         $user_id = request()->session()->get('user_id');
         $user = user::find($user_id);//dd($user);
-        $receive_qurery_count = query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
+        $receive_qurery_count = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->count();
 
         return view('query/query_sample')->with(compact('sample_user', 'sample_query_list', 'user', 'receive_qurery_count'));
     }

@@ -5,7 +5,7 @@
         <div class="modal-header" style="border-bottom: 0px;">
             <div class="col-sm-2"></div>
             <div class="col-sm-8" align="center">
-                <img src="{{ asset('img/man2.png') }}" style="width: 60px;">
+                <img src="{{ asset('img/man2.png') }}" style="width: 60px;border-radius:50%;">
             </div>
             <div class="col-sm-2">
                 <button type="button" class="close" data-dismiss="modal" style="font-size: 40px;">&times;</button>

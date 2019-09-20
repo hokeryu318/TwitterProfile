@@ -25,44 +25,37 @@ class Controller extends BaseController
         $base_url .= "://";
 
         $base_url .= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        $tmp = explode('twittlogin', $base_url);
+        $tmp = explode('callback', $base_url);
         $query_view_url = $tmp[0]."query_view/";
         $url = $query_view_url.$encode_user_id;
         return $url;
     }
 
-    public function check_user($user_email) {
-        $check_user = User::where('email', $user_email)->pluck('id')->first();
-        if($check_user)
-            return $check_user;
-        else
-            return 0;
-    }
+    public function register_user($getInfo, $provider) {
 
-    public function register_user($user_email, $user_name, $profile_name) {
-
-        //check user exist in website
-        $check_user = $this->check_user($user_email);
-
-        if($check_user == 0) {//userinfo register
-            $user = new user();
-            $user->name = $user_name;
-            $user->email = $user_email;
-            $user->password = '12345678';
-            $user->profile_name = $profile_name;
-            $user->save();
-            //logo image upload////////////
-
-            ///////////////////////////////
-            $user_id = $user->id;
-            $user->logo = "user".$user_id.".png";
-            $user->url = $this->make_url($user_id);
-            $user->save();
-        } else {//userinfo change
-            $user_id = $check_user;
-        }
-
-        return $user_id;
+        $user = User::where('provider_id', $getInfo->id)->first();//dd($getInfo);
+ 
+        if (!$user) {
+           $user = new User();
+	   $user->name = $getInfo->name;
+	   $user->email= $getInfo->email;
+	   $user->token= $getInfo->token;
+	   $user->tokenSecret= $getInfo->tokenSecret;
+	   $user->provider= $provider;
+	   $user->provider_id= $getInfo->id;
+	   $user->logo= $getInfo->avatar_original;
+	   $user->save();
+	   $user->url = $this->make_url($user->id);
+           $user->save();
+        } else {
+	   $user->name        = $getInfo->name;
+	   $user->email       = $getInfo->email;
+	   $user->token       = $getInfo->token;
+	   $user->tokenSecret = $getInfo->tokenSecret;
+	   $user->logo        = $getInfo->avatar_original;
+	   $user->save();
+	}
+        return $user;
     }
 
     function differenceInHours($startdate, $enddate){

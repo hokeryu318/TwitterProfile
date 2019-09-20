@@ -37,7 +37,7 @@
                                 </p>
                             </span>
                             {{--@if(isset($user))--}}
-                            <span><img src="{{ asset('logo/'.$user->logo) }}" style="width:30px;margin-top: -9px;"></span>
+                            <span><img src="{{ $user->logo }}" style="width:30px;margin-top: -9px;border-radius: 50%;"></span>
                             {{--@endif--}}
                             <span onclick="openNav()" class="menu_none">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

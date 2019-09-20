@@ -18,7 +18,7 @@
                     <img src="{{ asset('img/man1.png') }}">
                 </div>
                 <div class="sp-2"></div>
-                <div onclick="window.location='{{ url("/twittlogin") }}'">
+                <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                         <span>Twitterでログイン</span>

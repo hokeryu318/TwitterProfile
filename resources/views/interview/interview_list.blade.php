@@ -15,7 +15,7 @@
             <div class="sp-20"></div>
             <div class="interview_top">
                 <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;">
-                    <img src="{{ asset('logo/'.$user->logo) }}" style="position: relative;" />
+                    <img src="{{ $user->logo }}" class="avatar" />
                     <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
@@ -48,7 +48,7 @@
                         <div class="sp-40"></div>
                         <div class="border_bottom">
                             <div class="ib vm">
-                                <img src="{{ asset('logo/'.$receive->logo) }}" style="width: 50px;" onclick="window.location='{{ url("query_view/".$receive->send_user_id) }}'">
+                                <img src="{{ $receive->logo }}" style="width: 50px;border-radius:50%;" onclick="window.location='{{ url("query_view/".$receive->send_user_id) }}'">
                             </div>
                             <div class="ib vm" style="width: 80%;">
                                 <div class="fs-12" align="left">
@@ -118,7 +118,7 @@
                             <div class="sp-40"></div>
                             <div class="border_bottom">
                                 <div class="ib vm">
-                                    <img src="{{ asset('logo/'.$send->logo) }}" style="width: 50px;" onclick="window.location='{{ url("query_view/".$send->receive_user_id) }}'">
+                                    <img src="{{ $send->logo }}" style="width: 50px;border-radius:50%;nclick="window.location='{{ url("query_view/".$send->receive_user_id) }}'">
                                 </div>
                                 <div class="ib vm" style="width: 80%;">
                                     <div class="fs-12" align="left">

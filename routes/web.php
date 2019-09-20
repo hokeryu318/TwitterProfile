@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/authorize', function() {
+//Route::get('/authorize', function() {
 
-});
+//});
 
-Route::get('/tweet', function() {
+//Route::get('/tweet', function() {
 
-});
+//});
+
+Route::get('/auth/redirect/{provider}', 'SocialAuthTwitterController@redirect');
+Route::get('/callback/{provider}', 'SocialAuthTwitterController@callback');
 
 Route::get('/', 'SocialAuthTwitterController@index')->name('twittlogin');
 Route::get('/twittlogin', 'SocialAuthTwitterController@twittlogin');

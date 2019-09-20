@@ -5,7 +5,7 @@
         <!-- Modal content-->
         <div class="modal-content tlm">
             <div class="modal-header" style="border-bottom: 0px;">
-                <img src="{{ asset('logo/'.$sample_user_logo) }}" style="width: 35px;">
+                <img src="{{ $sample_user_logo }}" style="width: 35px;border-radius:50%;margin-right:20px;">
                 <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さんへインタビュー</span>
             </div>
             <div class="modal-body" style="padding: 0px;">

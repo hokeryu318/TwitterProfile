@@ -20,7 +20,7 @@
             <div class="sp-20"></div>
             <div>
                 <div class="ib vm" style="width: 30%;">
-                    <img src="{{ asset('logo/'.$sample_user->logo) }}">
+                    <img src="{{ $sample_user->logo }}" style="width: 70px;border-radius:50%;">
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
                 <div class="ib vm" style="width: 40%;">
@@ -35,7 +35,7 @@
             <div class="sp-40"></div>
             <div class="border_bottom">
                 <div align="left">
-                    <img class="vm" src="{{ asset('logo/'.$sample_user->logo) }}" style="width: 30px;">
+                    <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
                     <span class="vm fs-15">{{ $query->query }}</span>
                 </div>
                 <div class="sp-20"></div>
@@ -62,7 +62,7 @@
             <div class="sp-20"></div>
 
             @if(session('login_flag') != 1)
-                <div onclick="window.location='{{ url("/twittlogin1/".$sample_user->id) }}'">
+                <div onclick="window.location='{{ url("/auth/redirect/twitter/".$sample_user->id) }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                         <span>Twitterでログイン</span>

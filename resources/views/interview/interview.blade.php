@@ -18,7 +18,7 @@
             <div class="interview_top">
 
                 <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
-                    <img src="{{ asset('logo/'.$user->logo) }}" style="position: relative;" />
+                    <img src="{{ $user->logo }}" class="avatar" />
                     <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
@@ -41,7 +41,7 @@
                 <div class="sp-40"></div>
                 <div class="border_bottom">
                     <div align="left">
-                        <img class="vm" src="{{ asset('logo/'.$query->logo) }}" style="width: 30px;">
+                        <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
                         <span class="vm fs-15">{{ $query->query }}</span>
                         {{--<img onclick="" class="vm" src="{{ asset('img/pen.png') }}" sytle="right: 5px;">--}}
                     </div>
