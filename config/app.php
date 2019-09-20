@@ -177,6 +177,7 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Thujohn\Twitter\TwitterServiceProvider::class,
 
     ],
 
@@ -230,7 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Image' => Intervention\Image\Facades\Image::class,
-
+        'Twitter' => Thujohn\Twitter\Facades\Twitter::class,
     ],
 
 ];

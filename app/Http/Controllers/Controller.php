@@ -37,24 +37,24 @@ class Controller extends BaseController
  
         if (!$user) {
            $user = new User();
-	   $user->name = $getInfo->name;
-	   $user->email= $getInfo->email;
-	   $user->token= $getInfo->token;
-	   $user->tokenSecret= $getInfo->tokenSecret;
-	   $user->provider= $provider;
-	   $user->provider_id= $getInfo->id;
-	   $user->logo= $getInfo->avatar_original;
-	   $user->save();
-	   $user->url = $this->make_url($user->id);
+           $user->name        = $getInfo->name;
+           $user->email       = $getInfo->email;
+           $user->token       = $getInfo->token;
+           $user->tokenSecret = $getInfo->tokenSecret;
+           $user->provider    = $provider;
+           $user->provider_id = $getInfo->id;
+           $user->logo        = $getInfo->avatar_original;
+           $user->save();
+           $user->url = $this->make_url($user->id);
            $user->save();
         } else {
-	   $user->name        = $getInfo->name;
-	   $user->email       = $getInfo->email;
-	   $user->token       = $getInfo->token;
-	   $user->tokenSecret = $getInfo->tokenSecret;
-	   $user->logo        = $getInfo->avatar_original;
-	   $user->save();
-	}
+           $user->name        = $getInfo->name;
+           $user->email       = $getInfo->email;
+           $user->token       = $getInfo->token;
+           $user->tokenSecret = $getInfo->tokenSecret;
+           $user->logo        = $getInfo->avatar_original;
+           $user->save();
+        }
         return $user;
     }
 
