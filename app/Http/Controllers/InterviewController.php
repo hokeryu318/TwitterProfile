@@ -189,12 +189,11 @@ class InterviewController extends Controller
 
         $mute_list = Mute::where('user1', $user_id)->pluck('user2')->toArray();
 
-//        $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)
-//                          ->where(function($q) use ($user_id) {
-//                              $q->where('send_user_id', $user_id)
-//                                ->orwhere('receive_user_id', $user_id);
-//                          })->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
-        $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)->where('receive_user_id', $user_id);
+        $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)
+                          ->where(function($q) use ($user_id) {
+                              $q->where('receive_user_id', $user_id);
+                          })->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+//        $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)->where('receive_user_id', $user_id);
         $query_count = $query_list_tmp->count();
         $query_list = $query_list_tmp->take(5);
         foreach($query_list as $query) {
