@@ -118,7 +118,7 @@
                             <div class="sp-40"></div>
                             <div class="border_bottom">
                                 <div class="ib vm">
-                                    <img src="{{ $send->logo }}" style="width: 50px;border-radius:50%;nclick="window.location='{{ url("query_view/".$send->receive_user_id) }}'">
+                                    <img src="{{ $send->logo }}" style="width: 50px;border-radius:50%;" onclick="window.location='{{ url("query_view/".$send->receive_user_id) }}'">
                                 </div>
                                 <div class="ib vm" style="width: 80%;">
                                     <div class="fs-12" align="left">
