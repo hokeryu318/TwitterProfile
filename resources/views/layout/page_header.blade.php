@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@nytimesbits" />
-        <meta name="twitter:creator" content="@nickbilton" />
+        <meta name="twitter:site" content="@jiuhejong" />
+        <meta name="twitter:creator" content="@jiuhejong" />
         <meta property="og:url" content="https://who-japan.com/query_view/1" />
         <meta property="og:title" content="A Twitter for My Sister" />
         <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
