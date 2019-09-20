@@ -54,8 +54,8 @@ class SocialAuthTwitterController extends Controller
 //
 //            return view('query/query_sample')->with(compact('user', 'sample_user', 'sample_query_list', 'receive_qurery_count'));
 
-            $md_user_id = md5($sample_user_id);
-            return Redirect::to('query_view/'.$md_user_id);
+//            $md_user_id = md5($sample_user_id);
+            return Redirect::to('query_view/'.$sample_user_id);
         }
 
     }
