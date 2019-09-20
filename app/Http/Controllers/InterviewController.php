@@ -217,7 +217,6 @@ class InterviewController extends Controller
         $user = User::find($user_id);
         Twitter::postTweet(array('status' =>  $user->url.'?sl='.rand(1, 100), 'format' => 'json'));
 
-        $redirect = reguest()->redirect;
-        return redirect()->route($redirect);
+        return 'tweet success';
     }
 }

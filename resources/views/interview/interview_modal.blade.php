@@ -35,15 +35,14 @@
             type:"GET",
             url:"{{ route('tweet') }}",
             data:{
-                redirect: redirect
+
             },
             success: function(result){
                 // console.log(result);
-                $('#thirdModal').html(result);
+                $('#myModal').modal('hide');
             }
         });
-        $('#myModal').modal("hide");
-        $('#thirdModal').modal("show");
+        document.location.href = "{{ route(redirect) }}";
     }
 </script>
 
