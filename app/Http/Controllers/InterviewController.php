@@ -72,7 +72,7 @@ class InterviewController extends Controller
             $alert = "募集質問する方法を選択しよう！";
         else
             $alert = "インタビューお疲れ様でした！";
-        $user_id = Auth::id();
+        $user_id = Auth::id();dd($user_id);
         $user = User::find($user_id);
         return view('interview/interview_modal')->with(compact('alert', 'user'));
     }
