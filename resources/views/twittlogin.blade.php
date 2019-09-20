@@ -14,8 +14,9 @@
                 </div>
                 <div class="sp-1"></div>
                 <div>
-                    <img src="{{ asset('img/man2.png') }}">
-                    <img src="{{ asset('img/man1.png') }}">
+                    {{--<img src="{{ asset('img/man2.png') }}">--}}
+                    {{--<img src="{{ asset('img/man1.png') }}">--}}
+                    <img src="{{ $user->logo }}">
                 </div>
                 <div class="sp-2"></div>
                 <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
