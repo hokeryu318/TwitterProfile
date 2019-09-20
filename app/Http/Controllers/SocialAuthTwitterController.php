@@ -121,6 +121,7 @@ class SocialAuthTwitterController extends Controller
     }
 
     function logout() {
+        auth()->logout();
         return view('twittlogin');
     }
 }
