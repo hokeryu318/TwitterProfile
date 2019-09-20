@@ -61,7 +61,7 @@
 
             <div class="sp-20"></div>
 
-            @if(session('login_flag') != 1)
+            @if(Auth::check())
                 <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
