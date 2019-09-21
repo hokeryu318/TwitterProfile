@@ -118,7 +118,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2870" />
+          <entry key="css" value="2878" />
           <entry key="dummy" value="30" />
           <entry key="env" value="34" />
           <entry key="gitignore" value="2" />
@@ -131,7 +131,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Blade" value="16043" />
-          <entry key="CSS" value="2870" />
+          <entry key="CSS" value="2878" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
           <entry key="PHP" value="10955" />
@@ -223,8 +223,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="156" column="7" lean-forward="true" selection-start-line="154" selection-start-column="10" selection-end-line="156" selection-end-column="7" />
+            <state relative-caret-position="268">
+              <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -625,12 +625,12 @@
       <workItem from="1568164767157" duration="57762000" />
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
-      <workItem from="1568955535489" duration="62907000" />
+      <workItem from="1568955535489" duration="63258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="471466000" />
+    <option name="totallyTimeSpent" value="471817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1067,8 +1067,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="156" column="7" lean-forward="true" selection-start-line="154" selection-start-column="10" selection-end-line="156" selection-end-column="7" />
+        <state relative-caret-position="268">
+          <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
         </state>
       </provider>
     </entry>
