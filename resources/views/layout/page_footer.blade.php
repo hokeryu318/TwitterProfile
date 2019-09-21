@@ -1,5 +1,5 @@
 
-        <div class="container text-center min-hg-70" style="position: relative; bottom: 0;">
+        <div class="container text-center min-hg-70" style="position: absolute; bottom: 0;">
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4 border_top">
