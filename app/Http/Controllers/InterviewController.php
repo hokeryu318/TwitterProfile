@@ -216,8 +216,8 @@ class InterviewController extends Controller
         $user_id = Auth::id();
         $user = User::find($user_id);
         $connection = new TwitterOAuth(
-            CONSUMER_KEY, // Information about your twitter API
-            CONSUMER_SECRET, // Information about your twitter API
+            "nDEZIDlaDaKNGONZXboFVMjrn", // Information about your twitter API
+            "dptzcDhwgDgGIBqvTNVlKc2keEOaaeB5YEkTHNcRuM0UxUkcDY", // Information about your twitter API
             $user->token, // You get token from user, when him  sigin to your app by twitter api
             $user->tokenSecret// You get tokenSecret from user, when him  sigin to your app by twitter api
         );
