@@ -210,9 +210,9 @@ body {
         height: 630px;
         overflow-y: auto;
     }
-    .w-1 {
-        width: 185px;
-    }
+    /*.w-1 {*/
+        /*width: 185px;*/
+    /*}*/
 
 }
 
