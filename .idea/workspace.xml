@@ -124,13 +124,13 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="27105" />
+          <entry key="php" value="27112" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="16145" />
+          <entry key="Blade" value="16152" />
           <entry key="CSS" value="2900" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -574,12 +574,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="6441000" />
+      <workItem from="1569053819760" duration="6726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479012000" />
+    <option name="totallyTimeSpent" value="479297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,7 +601,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.23654708" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.23654708" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32847533" />
       <window_info anchor="bottom" id="Run" order="6" />
