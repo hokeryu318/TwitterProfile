@@ -76,7 +76,8 @@ class InterviewController extends Controller
         $user_id = Auth::id();
         $user = User::find($user_id);
         $redirect = request()->redirect;
-        return view('interview/interview_modal')->with(compact('alert', 'user', 'redirect'));
+        request()->session()->put('tw_md_url', $redirect);
+        return view('interview/interview_modal')->with(compact('alert', 'user'));
     }
 
     public function url_copy_modal()
@@ -222,7 +223,10 @@ class InterviewController extends Controller
             $user->tokenSecret// You get tokenSecret from user, when him  sigin to your app by twitter api
         );
         $connection->post("statuses/update", ["status" => $user->url.'?sl='.rand(1, 10000)]);
-        return redirect()->to('interview');
+
+        $url = request()->session()->get('tw_md_url');
+        return redirect()->to($url);
+//        return redirect()->to('interview');
 
     }
 }
