@@ -76,7 +76,7 @@
 
         <div class="col-sm-4"></div>
     </div>
-</div>
+{{--</div>--}}
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog"></div>
