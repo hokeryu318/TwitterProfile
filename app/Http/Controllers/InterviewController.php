@@ -221,7 +221,8 @@ class InterviewController extends Controller
             $user->token, // You get token from user, when him  sigin to your app by twitter api
             $user->tokenSecret// You get tokenSecret from user, when him  sigin to your app by twitter api
         );
-        return $connection->post("statuses/update", ["status" => $user->url.'?sl='.rand(1, 10000)]);
+        $connection->post("statuses/update", ["status" => $user->url.'?sl='.rand(1, 10000)]);
+        return 'tweet success';
 //        return Twitter::postTweet(array('status' => $user->url.'?sl='.rand(1, 10000), 'format' => 'json'));
 //        return Twitter::postTweet(array('status' => "adfsdfads", 'format' => 'json'));
 
