@@ -11,7 +11,8 @@
         <meta property="og:url" content="'@if(Auth::check()) {{ $user->url }} @endif'" />
         <meta property="og:title" content="Tweet from WHO" />
         <meta property="og:description" content="プロフ作りました" />
-        <meta property="og:image" content="'@if(Auth::check()) {{ $user->logo }} @endif'" />
+        {{--<meta property="og:image" content="'@if(Auth::check()) {{ $user->logo }} @endif'" />--}}
+        <meta property="og:image" content="http://pbs.twimg.com/profile_images/1088202672857964549/IO_0O6ZS.jpg" />
 
         {{--<meta name="twitter:card" content="summary" />--}}
         {{--<meta name="twitter:site" content="@jiuhejong" />--}}
