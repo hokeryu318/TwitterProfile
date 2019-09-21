@@ -37,6 +37,7 @@
 
     </head>
     <body>
+    <div style="min-height: 100%;">
         <div class="container text-center">
             <div class="sp-10"></div>
             <div class="row">
