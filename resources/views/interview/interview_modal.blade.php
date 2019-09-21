@@ -29,7 +29,7 @@
 </div>
 
 <script>
-    function tweet(redirect){
+    function tweet(redirect){alert('KK');
 
         $.ajax({
             type:"GET",
