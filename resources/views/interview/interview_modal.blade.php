@@ -14,7 +14,7 @@
         </div>
         <div class="modal-footer" style="display: block;border-top: 0px;margin-bottom: 20px;">
             <div>
-                <div class="twittshare" onclick="tweet('{{ $redirect }}')">
+                <div class="twittshare" onclick="window.location='{{ url("/tweet") }}'">
                     <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                     <span>Twitterでシェア！</span>
                 </div>
@@ -27,24 +27,6 @@
     </div>
 
 </div>
-
-<script>
-    function tweet(redirect){alert('KK');
-
-        $.ajax({
-            type:"GET",
-            url:"{{ route('tweet') }}",
-            data:{
-
-            },
-            success: function(result){
-                // console.log(result);
-                $('#myModal').modal('hide');
-            }
-        });
-        {{--document.location.href = "{{ route(redirect) }}";--}}
-    }
-</script>
 
 
 
