@@ -215,7 +215,7 @@ class InterviewController extends Controller
         $user_id = Auth::id();
         $user = User::find($user_id);
         config(['ttwitter.ACCESS_TOKEN'], $user->token);
-        config(['ttwitter.ACCESS_TOKEN_SECRET'], $user->token_secret);
+        config(['ttwitter.ACCESS_TOKEN_SECRET'], $user->tokenSecret);
         return Twitter::postTweet(array('status' => $user->url.'?sl='.rand(1, 10000), 'format' => 'json'));
 //        return Twitter::postTweet(array('status' => "adfsdfads", 'format' => 'json'));
 
