@@ -4,6 +4,7 @@ body {
     font-weight: 600;
     color: #858585;
     cursor: default;
+    height: 100%;
 }
 .wd-10 {
     width: 10%;
