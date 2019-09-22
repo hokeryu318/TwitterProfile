@@ -35,20 +35,20 @@
 
     </head>
     <body>
-    <div style="min-height: 100vh;position: relative;height: calc(var(--vh, 1vh) * 100);">
+    <div style="min-height: 100vh;position: relative;min-height: calc(var(--vh, 1vh) * 100);">
         <div class="container text-center">
             <div class="sp-10"></div>
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                     <div class="top_left">
-                        <span>WHO</span>
+                        <span class="fs-17">WHO</span>
                     </div>
                     <div class="top_right">
                         {{--@if(session('login_flag') != 1)--}}
                         @if(!(Auth::check()))
                             {{--<span onclick="window.location='{{ url("/login") }}'">ログイン</span>--}}
-                            <span onclick="window.location='{{ url("/auth/redirect/twitter") }}'">ログイン</span>
+                            <span class="fs-12" onclick="window.location='{{ url("/auth/redirect/twitter") }}'">ログイン</span>
                         @else
                             <span onclick="window.location='{{ route("interview_list") }}'">
                                 <img class="" src="{{ asset('img/mic.png') }}">

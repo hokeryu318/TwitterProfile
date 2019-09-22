@@ -9,9 +9,9 @@
                     <div class="sp-1"></div>
                     {{--<p>インタビューに答えて</p>--}}
                     @if(Auth::check())
-                    <p>インタビューに答えて</p>
+                    <p class="fs-17">インタビューに答えて</p>
                     @else
-                    <p>自分も作る / 編集する</p>
+                    <p class="fs-17">インタビューに答えて</p>
                     @endif
                     <div class="sp-1"></div>
                     {{--<p>この文章はダミーコピーです。</p>--}}
@@ -31,7 +31,7 @@
                 <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
-                        <span>Twitterでログイン</span>
+                        <span class="fs-17">Twitterでログイン</span>
                     </div>
                 </div>
                 @endif
