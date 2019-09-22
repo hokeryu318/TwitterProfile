@@ -49,7 +49,7 @@
                         <div class="sp-20"></div>
                         <div class="border_bottom">
                             <div class="ib vm">
-                                <img src="{{ $receive->logo }}" style="width: 50px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($receive->send_user_id)) }}'">
+                                <img src="{{ $receive->logo }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($receive->send_user_id)) }}'">
                             </div>
                             <div class="ib vm" style="width: 80%;">
                                 <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 200px;" onclick="remove_query({{ $receive->id }})">
@@ -59,17 +59,17 @@
                                 </div>
                                 <br>
                                 @if($receive->mute == 1)
-                                    <div align="left" class="mute_text_info_{{$receive->send_user_id}}">
+                                    <div align="left" class="mute_text_info_{{$receive->send_user_id}} mute_text">
                                         ミュート中の為、表示されません
                                     </div>
-                                    <div align="left" class="mute_text_{{$receive->send_user_id}} display-none">
+                                    <div align="left" class="mute_text_{{$receive->send_user_id}} display-none mute_text">
                                         {{ $receive->query }}
                                     </div>
                                 @else
-                                    <div align="left" class="mute_text_info_{{$receive->send_user_id}} display-none">
+                                    <div align="left" class="mute_text_info_{{$receive->send_user_id}} display-none mute_text">
                                         ミュート中の為、表示されません
                                     </div>
-                                    <div align="left" class="mute_text_{{$receive->send_user_id}}" style="word-break: break-all;">
+                                    <div align="left" class="mute_text_{{$receive->send_user_id}} mute_text">
                                         {{ $receive->query }}
                                     </div>
                                 @endif
@@ -120,7 +120,7 @@
                             <div class="sp-20"></div>
                             <div class="border_bottom">
                                 <div class="ib vm">
-                                    <img src="{{ $send->logo }}" style="width: 50px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($send->receive_user_id)) }}'">
+                                    <img src="{{ $send->logo }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($send->receive_user_id)) }}'">
                                 </div>
                                 <div class="ib vm" style="width: 80%;">
                                     <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 200px;" onclick="remove_query({{ $send->id }})">
@@ -130,17 +130,17 @@
                                     </div>
                                     <br>
                                     @if($send->mute == 1)
-                                        <div align="left" class="mute_text_info_{{$send->send_user_id}}" style="word-break: break-all;margin-top: -10px;">
+                                        <div align="left" class="mute_text_info_{{$send->send_user_id}} mute_text">
                                             ミュート中の為、表示されません
                                         </div>
-                                        <div align="left" class="mute_text_{{$send->send_user_id}} display-none" style="word-break: break-all;margin-top: -10px;">
+                                        <div align="left" class="mute_text_{{$send->send_user_id}} display-none mute_text">
                                             {{ $send->query }}
                                         </div>
                                     @else
-                                        <div align="left" class="mute_text_info_{{$send->send_user_id}} display-none" style="word-break: break-all;margin-top: -10px;">
+                                        <div align="left" class="mute_text_info_{{$send->send_user_id}} display-none mute_text">
                                             ミュート中の為、表示されません
                                         </div>
-                                        <div align="left" class="mute_text_{{$send->send_user_id}}" style="word-break: break-all;margin-top: -10px;">
+                                        <div align="left" class="mute_text_{{$send->send_user_id}} mute_text">
                                             {{ $send->query }}
                                         </div>
                                     @endif

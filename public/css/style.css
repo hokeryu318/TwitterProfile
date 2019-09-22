@@ -830,3 +830,9 @@ body {
     position: relative;
     margin-bottom: 5px;	
 }
+
+.mute_text {
+    word-break: break-all;
+    margin-top: -10px;
+    font-size: 15px;
+}
