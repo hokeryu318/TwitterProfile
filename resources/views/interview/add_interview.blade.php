@@ -14,22 +14,24 @@
 
             <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
-            <div class="interview_top" id="interview_top">
+            <div id="interview_top">
                 <div class="sp-20"></div>
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
-                    <img src="{{ $user->logo }}" class="avatar" />
-                    <div class="query_collect">質問を募集</div>
-                </div>
-                <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
-                    <div style="width: 120%; margin-bottom: 32px;">
-                        <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
-                        <br>
-                        <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+                <div class="interview_top">
+                    <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
+                        <img src="{{ $user->logo }}" class="avatar" />
+                        <div class="query_collect">質問を募集</div>
                     </div>
-                    <div class="interview_share">
-                        <span><img src="{{ asset('img/share.png') }}"></span>
-                        <span>インタビューをシェア</span>
+                    <div class="ib vm" style="width: 1%;"></div>
+                    <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
+                        <div style="width: 120%; margin-bottom: 32px;">
+                            <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
+                            <br>
+                            <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+                        </div>
+                        <div class="interview_share">
+                            <span><img src="{{ asset('img/share.png') }}"></span>
+                            <span>インタビューをシェア</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,10 +81,12 @@
                 </div>
             @endif
 
-            <div class="advertise" id="advertise">
-                <div class="sp-40"></div>
-                <p class="ad_text">Adが入るスペース</p>
-                <div class="sp-30"></div>
+            <div id="advertise">
+                <div class="advertise">
+                    <div class="sp-40"></div>
+                    <p class="ad_text">Adが入るスペース</p>
+                    <div class="sp-30"></div>
+                </div>
             </div>
 
         </div>
