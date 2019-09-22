@@ -4,11 +4,12 @@
 
 <div class="container text-center">
 
-    <div class="row hg-cont-0">
+    <div class="row">
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40">
+        <div class="col-sm-4 pl-40 pr-40" id="cont">
+
             <img class="sticky" align="right" src="{{ asset('img/mic1.png') }}" width="50px" height="50px"
                  @if(Auth::check())
                     onclick="query_post_modal('{{ $sample_user->logo }}', '{{ $sample_user->name }}', '{{ $sample_user->id }}')"
@@ -17,8 +18,8 @@
                  @endif
             >
 
-            <div class="sp-20"></div>
-            <div>
+            <div id="user_data">
+                <div class="sp-20"></div>
                 <div class="ib vm" style="width: 30%;">
                     <img src="{{ $sample_user->logo }}" style="width: 70px;border-radius:50%;">
                 </div>
@@ -30,56 +31,52 @@
                 </div>
             </div>
 
-            <div class="hg-cont-2">
+            <div id="cont1">
             @foreach($sample_query_list as $query)
-            <div class="sp-40"></div>
-            <div class="border_bottom">
-                <div align="left">
-                    <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
-                    <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
-                </div>
-                <div class="sp-20"></div>
-                <div align="left">
-                    <span class="fs-15" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
-                </div>
                 <div class="sp-40"></div>
-            </div>
+                <div class="border_bottom">
+                    <div align="left">
+                        <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
+                        <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
+                    </div>
+                    <div class="sp-20"></div>
+                    <div align="left">
+                        <span class="fs-15" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
+                    </div>
+                    <div class="sp-40"></div>
+                </div>
             @endforeach
-            </div>
 
-            <div class="sp-20"></div>
-
-            <div>
+            @if(count($sample_query_list) > 5)
+                <div style="margin-top: 20px;">
                 <span class="fs-15">
-                    @if(count($sample_query_list) > 5)
-                        もっと見る
-                    @else
-                        &nbsp;
-                    @endif
+                    もっと見る
                 </span>
-            </div>
-
-            <div class="sp-20"></div>
+                </div>
+            @endif
 
             @if(!(Auth::check()))
+                <div class="sp-20"></div>
                 <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
                         <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
                         <span>Twitterでログイン</span>
                     </div>
                 </div>
-
                 <div class="sp-20"></div>
-
                 <div>
                     <span class="fs-15">インタビューを作成する</span>
                 </div>
             @endif
+            </div>
 
-            <div class="sp-20"></div>
-
-            <div class="advertise">
-                <p class="ad_text">Adが入るスペース</p>
+            <div id="advertise">
+                <div class="sp-40"></div>
+                <div class="advertise">
+                    <p class="ad_text fs-15">Adが入る<br>スペース</p>
+                    <div class="sp-30"></div>
+                </div>
+                <div class="sp-30"></div>
             </div>
 
         </div>
@@ -95,6 +92,13 @@
 @include('layout.page_footer')
 
 <script>
+
+    var screen_height = window.innerHeight;
+    var cont_height = screen_height-118;
+    $('#cont').css({'min-height': cont_height + "px"});
+    var cont1_height = cont_height - $('#user_data').height() - $('#advertise').height();
+    $('#cont1').css({'min-height': cont1_height + "px"});
+
     function twitt_login_modal(id){
         $.ajax({
             type:"GET",
