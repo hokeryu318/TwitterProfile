@@ -124,13 +124,13 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="27568" />
+          <entry key="php" value="27577" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="16596" />
+          <entry key="Blade" value="16605" />
           <entry key="CSS" value="2941" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -191,7 +191,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/twittlogin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="497">
-              <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -646,12 +646,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="24280000" />
+      <workItem from="1569053819760" duration="24392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496851000" />
+    <option name="totallyTimeSpent" value="496963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1084,7 +1084,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/twittlogin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
-          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
         </state>
       </provider>
     </entry>
