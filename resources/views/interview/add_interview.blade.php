@@ -4,6 +4,8 @@
 
 <div id="int_input_finish" class="interview_post" style="display: none;">インタビューが完成しました！</div>
 
+<span class="it_finish" align="right" id="interviewfinish">完了</span>
+
 <div class="container text-center">
 
     <div class="row">
@@ -12,8 +14,7 @@
 
         <div class="col-sm-4 pl-40 pr-40">
 
-            {{--<span class="it_finish" align="right" id="interviewfinish" onclick="interviewfinish()">完了</span>--}}
-            <span class="it_finish" align="right" id="interviewfinish">完了</span>
+            {{--<span class="it_finish" align="right" id="interviewfinish">完了</span>--}}
 
             <div class="sp-20"></div>
             <div class="interview_top" style="opacity: 0.2;">
