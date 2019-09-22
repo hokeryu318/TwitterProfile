@@ -37,7 +37,7 @@
     <body>
     <div style="min-height: 100vh;position: relative;min-height: calc(var(--vh, 1vh) * 100);">
         <div class="container text-center">
-            <div class="sp-10"></div>
+            <div style="height: 11px;"></div>
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-sm-4"></div>
             </div>
-            <div class="sp-10"></div>
+            <div style="height: 6px;"></div>
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4 border_top">
