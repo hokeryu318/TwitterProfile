@@ -36,7 +36,7 @@ class SocialAuthTwitterController extends Controller
         auth()->login($user);
 
 //        $url = request()->session()->get('redirect');
-        $url = 'twittlogin';
+        $url = '/';
         return redirect()->to($url);
 
     }
