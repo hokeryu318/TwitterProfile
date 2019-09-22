@@ -87,6 +87,7 @@
                     <p class="ad_text">Adが入るスペース</p>
                     <div class="sp-30"></div>
                 </div>
+                <div class="sp-30"></div>
             </div>
 
         </div>
@@ -117,7 +118,7 @@
 @include('layout.page_footer')
 
 <script>
-alert($('#interview_top').innerHeight);
+alert($('#interview_top').height());
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
     $('#cont').css({'min-height': cont_height + "px"});

@@ -124,13 +124,13 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="27998" />
+          <entry key="php" value="28014" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="17026" />
+          <entry key="Blade" value="17042" />
           <entry key="CSS" value="2983" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -212,8 +212,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="472" column="13" selection-start-line="472" selection-start-column="13" selection-end-line="472" selection-end-column="13" />
+            <state relative-caret-position="209">
+              <caret line="356" column="4" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -253,8 +253,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="327">
+              <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -282,7 +282,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user</find>
       <find>ログインして〇〇さんへインタビュー</find>
       <find>dd</find>
       <find>request()-&gt;session()-&gt;get('user_id')</find>
@@ -312,6 +311,7 @@
       <find>interview_top</find>
       <find>advertise</find>
       <find>sp-</find>
+      <find>adv</find>
     </findStrings>
     <replaceStrings>
       <replace>fs-15</replace>
@@ -653,12 +653,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="29766000" />
+      <workItem from="1569053819760" duration="29911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="502337000" />
+    <option name="totallyTimeSpent" value="502482000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1083,15 +1083,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="472" column="13" selection-start-line="472" selection-start-column="13" selection-end-line="472" selection-end-column="13" />
+        <state relative-caret-position="209">
+          <caret line="356" column="4" selection-start-line="356" selection-start-column="1" selection-end-line="356" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="327">
+          <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
