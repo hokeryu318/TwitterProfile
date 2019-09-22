@@ -25,9 +25,9 @@
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
                 <div class="ib vm" style="width: 40%;">
-                    <span style="float: left;">{{ $sample_user->name }}さんへ</span>
+                    <span style="float: left;font-size: 15px;">{{ $sample_user->name }}さんへ</span>
                     <br>
-                    <span style="float: left;">聞いてみました!</span>
+                    <span style="float: left;font-size: 15px;">聞いてみました!</span>
                 </div>
             </div>
 
