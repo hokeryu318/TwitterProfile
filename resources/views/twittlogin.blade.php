@@ -45,6 +45,7 @@
 
 <script>
 
-    alert('KK');
+    var screen_height = window.innerHeight;
+    $('.hg-cont').style.height = screen_height - 115;
 </script>
 
