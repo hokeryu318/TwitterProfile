@@ -1,7 +1,7 @@
 @include('layout.page_header')
 
     <div class="container text-center">
-        <div class="row cont">
+        <div class="row" id="cont">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
                 <div class="sp-0"></div>
@@ -47,6 +47,6 @@
 
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
-    $('.cont').css({'height': cont_height + "px !important"});
+    $('#cont').css({'height': cont_height + "px !important"});
 </script>
 
