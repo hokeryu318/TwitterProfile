@@ -48,7 +48,7 @@
                         <div id="item_{{ $receive->id }}">
                         <div class="sp-20"></div>
                         <div class="border_bottom">
-                            <div class="ib vm">
+                            <div class="ib vm" style="margin-top: 25px;">
                                 <img src="{{ $receive->logo }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($receive->send_user_id)) }}'">
                             </div>
                             <div class="ib vm" style="width: 80%;">
@@ -119,7 +119,7 @@
                         <div id="item_{{ $send->id }}">
                             <div class="sp-20"></div>
                             <div class="border_bottom">
-                                <div class="ib vm">
+                                <div class="ib vm" style="margin-top: 25px;">
                                     <img src="{{ $send->logo }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($send->receive_user_id)) }}'">
                                 </div>
                                 <div class="ib vm" style="width: 80%;">
