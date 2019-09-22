@@ -6,11 +6,11 @@
 <input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
 <div class="container text-center">
 
-    <div class="row hg-cont-0">
+    <div class="row">
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
+        <div class="col-sm-4 pl-40 pr-40" id="cont">
 
             <img class="sticky" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="window.location='{{ route("add_interview") }}'">
 
@@ -86,6 +86,11 @@
 @include('layout.page_footer')
 
 <script>
+
+    var screen_height = window.innerHeight;
+    var cont_height = screen_height-115;
+    $('#cont').css({'height': cont_height + "px"});
+
     function interview_modal(op){
 
         $.ajax({

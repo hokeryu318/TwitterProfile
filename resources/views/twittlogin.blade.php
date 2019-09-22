@@ -44,7 +44,6 @@
 @include('layout.page_footer')
 
 <script>
-
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
     $('#cont').css({'height': cont_height + "px"});
