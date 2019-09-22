@@ -89,7 +89,7 @@
 
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
-    $('#cont').css({'height': cont_height + "px"});
+    $('#cont').css({'min-height': cont_height + "px"});
 
     function interview_modal(op){
 
