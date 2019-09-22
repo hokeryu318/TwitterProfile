@@ -810,6 +810,7 @@ body {
     color: white;
     position: sticky;
     top: calc(100vh - 70px);
+    left: calc(40vh - 20px);
     float: right;
     margin-bottom: 20px;
     z-index: 1;
