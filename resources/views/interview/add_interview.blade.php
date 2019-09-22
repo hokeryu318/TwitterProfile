@@ -16,7 +16,7 @@
 
             <div id="interview_top">
                 <div class="sp-20"></div>
-                <div class="interview_top">
+                <div class="interview_top" style="opacity: 0.2;">
                     <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
                         <img src="{{ $user->logo }}" class="avatar" />
                         <div class="query_collect">質問を募集</div>
