@@ -122,7 +122,7 @@
                                     <img src="{{ $send->logo }}" style="width: 50px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($send->receive_user_id)) }}'">
                                 </div>
                                 <div class="ib vm" style="width: 80%;">
-                                    <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 270px;" onclick="remove_query({{ $send->id }})">
+                                    <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 200px;" onclick="remove_query({{ $send->id }})">
                                     <div class="fs-12" align="left">
                                         <div class="ib w-1">{{ $send->duration }}時間前</div>
                                         {{--<div class="ib" style="font-size: 35px;margin-top: -20px;" onclick="remove_query({{ $send->id }})">&times;</div>--}}
