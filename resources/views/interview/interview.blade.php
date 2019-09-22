@@ -68,13 +68,30 @@
 
             <div class="sp-40"></div>
 
-            <div class="advertise">
-                <p class="ad_text">Adが入るスペース</p>
-            </div>
+            {{--<div class="advertise">--}}
+                {{--<p class="ad_text">Adが入るスペース</p>--}}
+            {{--</div>--}}
 
         </div>
 
         <div class="col-sm-4"></div>
+    </div>
+</div>
+
+<div class="container text-center">
+
+    <div class="row">
+
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
+            <div class="advertise">
+                <p class="ad_text">Adが入るスペース</p>
+            </div>
+        </div>
+
+        <div class="col-sm-4"></div>
+
     </div>
 </div>
 
