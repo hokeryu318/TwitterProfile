@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>Prof</title>
+        <title>WHO</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,7 +37,7 @@
 
     </head>
     <body>
-    <div style="min-height: 100vh;position: relative;">
+    <div style="min-height: 100vh;position: relative;height: calc(var(--vh, 1vh) * 100);">
         <div class="container text-center">
             <div class="sp-10"></div>
             <div class="row">
@@ -113,4 +113,9 @@
                 document.getElementById("mySidenav").style.width = "0";
                 document.getElementsByTagName("body")[0].style.position = "unset";
             }
+        </script>
+
+        <script>
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
         </script>
