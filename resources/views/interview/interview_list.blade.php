@@ -14,10 +14,10 @@
 
             <div id="interview_top">
                 <div class="sp-20"></div>
-                <div class="interview_top" style="opacity: 0.2;">
+                <div class="interview_top">
                     <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: 9%;">
                         <img src="{{ $user->logo }}" class="avatar" />
-                        <div class="query_collect">質問を募集</div>
+                        <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                     </div>
                     <div class="ib vm" style="width: 1%;"></div>
                     <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 25px;">
@@ -26,7 +26,7 @@
                             <br>
                             <span style="float: left;margin-left: 10px;font-size: 15px;">インタビュー数{{ $query_count }}</span>
                         </div>
-                        <div class="interview_share">
+                        <div class="interview_share" onclick="interview_modal(2)">
                             <span><img src="{{ asset('img/share.png') }}"></span>
                             <span>インタビューをシェア</span>
                         </div>
