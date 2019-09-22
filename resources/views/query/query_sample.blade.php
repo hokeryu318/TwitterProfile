@@ -32,43 +32,48 @@
             </div>
 
             <div id="cont1">
-            @foreach($sample_query_list as $query)
-                <div class="sp-40"></div>
-                <div class="border_bottom">
-                    <div align="left">
-                        <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
-                        <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
-                    </div>
-                    <div class="sp-20"></div>
-                    <div align="left">
-                        <span class="fs-15" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
-                    </div>
+                <div id="cont2">
+                @foreach($sample_query_list as $query)
                     <div class="sp-40"></div>
-                </div>
-            @endforeach
-
-            @if(count($sample_query_list) > 5)
-                <div style="margin-top: 20px;">
-                <span class="fs-15">
-                    もっと見る
-                </span>
-                </div>
-            @endif
-
-            @if(!(Auth::check()))
-                <div class="sp-20"></div>
-                <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
-                    <div class="twittlogin">
-                        <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
-                        <span>Twitterでログイン</span>
+                    <div class="border_bottom">
+                        <div align="left">
+                            <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
+                            <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
+                        </div>
+                        <div class="sp-20"></div>
+                        <div align="left">
+                            <span class="fs-15" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
+                        </div>
+                        <div class="sp-40"></div>
                     </div>
+                @endforeach
                 </div>
-                <div class="sp-20"></div>
-                <div>
-                    <span class="fs-15">インタビューを作成する</span>
-                </div>
-            @endif
-            </div>
+
+                @if(count($sample_query_list) > 5)
+                    <div style="margin-top: 20px;">
+                    <span class="fs-15">
+                        もっと見る
+                    </span>
+                    </div>
+                @endif
+
+                @if(!(Auth::check()))
+                    <input type="hidden" id="unauth_check" value="1">
+                    <div id="login">
+                        <div class="sp-20"></div>
+                        <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
+                            <div class="twittlogin">
+                                <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
+                                <span>Twitterでログイン</span>
+                            </div>
+                        </div>
+                        <div class="sp-20"></div>
+                        <div>
+                            <span class="fs-15">インタビューを作成する</span>
+                        </div>
+                    </div>
+                @endif
+            </input>
 
             <div id="advertise">
                 <div class="sp-40"></div>
@@ -98,6 +103,13 @@
     $('#cont').css({'min-height': cont_height + "px"});
     var cont1_height = cont_height - $('#user_data').height() - $('#advertise').height();
     $('#cont1').css({'min-height': cont1_height + "px"});
+    if($('#unauth_check').value == 1) {
+        var cont2_height = cont1_height - $('#login').height();
+        $('#cont2').css({'min-height': cont2_height + "px"});
+    } else {
+        var cont2_height = cont1_height;
+        $('#cont2').css({'min-height': cont2_height + "px"});
+    }
 
     function twitt_login_modal(id){
         $.ajax({
