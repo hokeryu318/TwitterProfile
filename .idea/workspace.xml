@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -118,20 +119,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2941" />
+          <entry key="css" value="2976" />
           <entry key="dummy" value="30" />
           <entry key="env" value="34" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="27795" />
+          <entry key="php" value="27903" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="16823" />
-          <entry key="CSS" value="2941" />
+          <entry key="Blade" value="16931" />
+          <entry key="CSS" value="2976" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
           <entry key="PHP" value="10967" />
@@ -212,8 +213,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="469" column="6" selection-start-line="469" selection-start-column="1" selection-end-line="469" selection-end-column="6" />
+            <state relative-caret-position="288">
+              <caret line="357" column="20" selection-start-line="357" selection-start-column="20" selection-end-line="357" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -253,11 +254,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="629">
+              <caret line="117" column="57" lean-forward="true" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#2;n#!!top" />
                 <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -279,9 +283,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>request()-&gt;session()-&gt;get('login_flag'</find>
-      <find>query_view</find>
-      <find>interview(</find>
       <find>show</find>
       <find>user</find>
       <find>ログインして〇〇さんへインタビュー</find>
@@ -309,6 +310,9 @@
       <find>hg-cont-</find>
       <find>col-sm-4</find>
       <find>sp-20</find>
+      <find>adver</find>
+      <find>interview_top</find>
+      <find>advertise</find>
     </findStrings>
     <replaceStrings>
       <replace>fs-15</replace>
@@ -373,11 +377,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/InterviewController.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/interview_list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialAuthTwitterController.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/layout/page_header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/page_footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/twittlogin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/interview/interview.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" />
       </list>
     </option>
@@ -650,12 +654,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="27642000" />
+      <workItem from="1569053819760" duration="28911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="500213000" />
+    <option name="totallyTimeSpent" value="501482000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,7 +681,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.2073991" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.2073991" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32847533" />
       <window_info anchor="bottom" id="Run" order="6" />
@@ -1080,18 +1084,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="469" column="6" selection-start-line="469" selection-start-column="1" selection-end-line="469" selection-end-column="6" />
+        <state relative-caret-position="288">
+          <caret line="357" column="20" selection-start-line="357" selection-start-column="20" selection-end-line="357" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="629">
+          <caret line="117" column="57" lean-forward="true" selection-start-line="117" selection-start-column="57" selection-end-line="117" selection-end-column="57" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#2;n#!!top" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

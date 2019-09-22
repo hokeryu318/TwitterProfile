@@ -14,8 +14,7 @@
 
             <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
-            <div class="sp-20"></div>
-            <div class="interview_top" style="opacity: 0.2;">
+            <div class="interview_top" id="interview_top">
                 <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
                     <img src="{{ $user->logo }}" class="avatar" />
                     <div class="query_collect">質問を募集</div>
@@ -34,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="hg-cont-1">
+            <div id="cont1">
                 <div class="sp-20"></div>
 
                 <span class="add_it_btn fs-15" >+&nbsp;&nbsp;&nbsp;インタビューを追加</span>
@@ -79,7 +78,7 @@
                 </div>
             @endif
 
-            <div class="advertise" style="margin-top: 40px;">
+            <div class="advertise" id="advertise">
                 <p class="ad_text">Adが入るスペース</p>
             </div>
 
@@ -115,6 +114,8 @@
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
     $('#cont').css({'min-height': cont_height + "px"});
+    var cont1_height = cont_height - $('#interview_top').height - $('#advertise').height;
+    $('#cont1').css({'min-height': cont1_height + "px"});
 
     $(document).ready(function(){
         var maxField = 5; //Input fields increment limitation
