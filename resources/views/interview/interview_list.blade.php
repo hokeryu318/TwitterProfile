@@ -283,7 +283,7 @@
             data:{id: id},
             success: function(result){
                 if(result == "success") {
-                    window.location.href = "{{URL::to('add_interview')}}"
+                    window.location.href = "{{ROUTE::to('add_interview')}}"
                 }
             }
         });
