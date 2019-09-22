@@ -118,11 +118,11 @@
 @include('layout.page_footer')
 
 <script>
-alert($('#interview_top').height());
+
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
     $('#cont').css({'min-height': cont_height + "px"});
-    var cont1_height = cont_height - $('#interview_top').height - $('#advertise').height;
+    var cont1_height = cont_height - $('#interview_top').height() - $('#advertise').height();
     $('#cont1').css({'min-height': cont1_height + "px"});
 
     $(document).ready(function(){
