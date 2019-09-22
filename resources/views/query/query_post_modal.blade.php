@@ -30,7 +30,7 @@
             data:{sample_user_id: sample_user_id, new_query: new_query, _token:"{{ csrf_token() }}"},
             success: function(result){
                 if(result == 1)
-                    $('#interview_post').fadeIn(1000).fadeOut(1000);
+                    $('#interview_post').fadeIn(2000).fadeOut(2000);
             }
         });
         $("#myModal").modal("toggle");
