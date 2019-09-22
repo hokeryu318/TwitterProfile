@@ -636,7 +636,7 @@ body {
 .sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: calc(100vh - 120px);
+    top: calc(100vh - 130px);
     margin-bottom: 20px;
     z-index: 1;
 }
@@ -815,7 +815,7 @@ body {
     border-radius: 50%;
     color: white;
     position: sticky;
-    top: calc(100vh - 120px);
+    top: calc(100vh - 130px);
     left: calc(40vh - 20px);
     float: right;
     margin-bottom: 20px;

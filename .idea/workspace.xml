@@ -118,7 +118,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="3025" />
+          <entry key="css" value="3031" />
           <entry key="dummy" value="30" />
           <entry key="env" value="34" />
           <entry key="gitignore" value="2" />
@@ -131,7 +131,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Blade" value="17313" />
-          <entry key="CSS" value="3025" />
+          <entry key="CSS" value="3031" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
           <entry key="PHP" value="10967" />
@@ -220,8 +220,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="638" column="25" selection-start-line="638" selection-start-column="25" selection-end-line="638" selection-end-column="25" />
+            <state relative-caret-position="256">
+              <caret line="817" column="25" selection-start-line="817" selection-start-column="25" selection-end-line="817" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -300,7 +300,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$md_user_id</find>
       <find>url(&quot;query_view</find>
       <find>tweet</find>
       <find>auth/redirect</find>
@@ -330,6 +329,7 @@
       <find>fs</find>
       <find>twittlo</find>
       <find>who</find>
+      <find>100vh</find>
     </findStrings>
     <replaceStrings>
       <replace>fs-15</replace>
@@ -671,12 +671,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="38185000" />
+      <workItem from="1569053819760" duration="38260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510756000" />
+    <option name="totallyTimeSpent" value="510831000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1140,8 +1140,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="638" column="25" selection-start-line="638" selection-start-column="25" selection-end-line="638" selection-end-column="25" />
+        <state relative-caret-position="256">
+          <caret line="817" column="25" selection-start-line="817" selection-start-column="25" selection-end-line="817" selection-end-column="25" />
         </state>
       </provider>
     </entry>
