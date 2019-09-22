@@ -5,39 +5,41 @@
 <input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
 <div class="container text-center">
 
-    <div class="row hg-cont-0">
+    <div class="row">
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
+        <div class="col-sm-4 pl-40 pr-40">
             <img class="sticky display-none" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="">
 
-            <div class="sp-20"></div>
-            <div class="interview_top">
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;">
-                    <img src="{{ $user->logo }}" class="avatar" />
-                    <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
-                </div>
-                <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;margin-right: 6%;">
-                    <div style="width: 120%; margin-bottom: 32px;">
-                        <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
-                        <br>
-                        <span style="float: left;margin-left: 10px;">インタビュー数&nbsp;{{ $query_count }}</span>
+            <div id="interview_top">
+                <div class="sp-20"></div>
+                <div class="interview_top" style="opacity: 0.2;">
+                    <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: 9%;">
+                        <img src="{{ $user->logo }}" class="avatar" />
+                        <div class="query_collect">質問を募集</div>
                     </div>
-                    <div class="interview_share" onclick="interview_modal(2)">
-                        <span><img src="{{ asset('img/share.png') }}"></span>
-                        <span>インタビューをシェア</span>
+                    <div class="ib vm" style="width: 1%;"></div>
+                    <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 25px;">
+                        <div style="width: 120%; margin-bottom: 32px;">
+                            <span style="float: left;margin-left: 10px;font-size: 15px;">{{ $user->name }}さんの</span>
+                            <br>
+                            <span style="float: left;margin-left: 10px;font-size: 15px;">インタビュー数{{ $query_count }}</span>
+                        </div>
+                        <div class="interview_share">
+                            <span><img src="{{ asset('img/share.png') }}"></span>
+                            <span>インタビューをシェア</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="sp-40"></div>
 
-            <div class="hg-cont-1">
+            <div class="cont1">
                 <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'query')" id="defaultOpen">質問</button>
-                    <button class="tablinks" onclick="openCity(event, 'send_query')">送った質問</button>
+                    <button class="tablinks fs-17" onclick="openCity(event, 'query')" id="defaultOpen">質問</button>
+                    <button class="tablinks fs-17" onclick="openCity(event, 'send_query')">送った質問</button>
                 </div>
 
                 <div class="sp-20"></div>
@@ -175,10 +177,13 @@
 
             </div>
 
-            <div class="sp-40"></div>
-
-            <div class="advertise">
-                <p class="ad_text">Adが入るスペース</p>
+            <div id="advertise">
+                <div class="sp-40"></div>
+                <div class="advertise">
+                    <p class="ad_text fs-15">Adが入る<br>スペース</p>
+                    <div class="sp-30"></div>
+                </div>
+                <div class="sp-30"></div>
             </div>
 
         </div>
@@ -194,6 +199,12 @@
 @include('layout.page_footer')
 
 <script>
+
+    var screen_height = window.innerHeight;
+    var cont_height = screen_height-118;
+    $('#cont').css({'min-height': cont_height + "px"});
+    var cont1_height = cont_height - $('#interview_top').height() - $('#advertise').height();
+    $('#cont1').css({'min-height': cont1_height + "px"});
 
     //tab content part
     function openCity(evt, cityName) {
