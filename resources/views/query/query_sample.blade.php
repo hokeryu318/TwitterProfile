@@ -103,7 +103,7 @@
     $('#cont').css({'min-height': cont_height + "px"});
     var cont1_height = cont_height - $('#user_data').height() - $('#advertise').height();
     $('#cont1').css({'min-height': cont1_height + "px"});
-    if($('#unauth_check').val() == 1) {alert('dd');
+    if($('#unauth_check').val() == 1) {
         var cont2_height = cont1_height - $('#login').height();
         $('#cont2').css({'min-height': cont2_height + "px"});
     } else {
