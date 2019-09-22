@@ -17,12 +17,12 @@
             <div id="interview_top">
                 <div class="sp-20"></div>
                 <div class="interview_top">
-                    <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
+                    <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: 9%;">
                         <img src="{{ $user->logo }}" class="avatar" />
                         <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                     </div>
                     <div class="ib vm" style="width: 1%;"></div>
-                    <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
+                    <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 25px;">
                         <div style="width: 120%; margin-bottom: 32px;">
                             <span style="float: left;margin-left: 10px;font-size: 15px;">{{ $user->name }}さんの</span>
                             <br>
