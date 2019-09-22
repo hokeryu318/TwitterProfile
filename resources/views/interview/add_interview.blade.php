@@ -77,12 +77,6 @@
                         もっと見る
                     </span>
                 </div>
-            @else
-                <div>
-                    <span class="fs-15">
-                        &nbsp;
-                    </span>
-                </div>
             @endif
 
             <div class="advertise" style="margin-top: 40px;">
