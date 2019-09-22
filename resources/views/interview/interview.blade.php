@@ -6,11 +6,11 @@
 <input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
 <div class="container text-center">
 
-    <div class="row">
+    <div class="row hg-cont-0">
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40">
+        <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
 
             <img class="sticky" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="window.location='{{ route("add_interview") }}'">
 
@@ -68,30 +68,13 @@
 
             <div class="sp-40"></div>
 
-            {{--<div class="advertise">--}}
-                {{--<p class="ad_text">Adが入るスペース</p>--}}
-            {{--</div>--}}
-
-        </div>
-
-        <div class="col-sm-4"></div>
-    </div>
-</div>
-
-<div class="container text-center">
-
-    <div class="row">
-
-        <div class="col-sm-4"></div>
-
-        <div class="col-sm-4 pl-40 pr-40">
             <div class="advertise">
                 <p class="ad_text">Adが入るスペース</p>
             </div>
+
         </div>
 
         <div class="col-sm-4"></div>
-
     </div>
 </div>
 
