@@ -124,13 +124,13 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="28019" />
+          <entry key="php" value="28025" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="17047" />
+          <entry key="Blade" value="17053" />
           <entry key="CSS" value="2983" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -253,8 +253,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="124" column="92" selection-start-line="124" selection-start-column="92" selection-end-line="124" selection-end-column="92" />
+            <state relative-caret-position="361">
+              <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -653,12 +653,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="29955000" />
+      <workItem from="1569053819760" duration="30239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="502526000" />
+    <option name="totallyTimeSpent" value="502810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1090,8 +1090,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="124" column="92" selection-start-line="124" selection-start-column="92" selection-end-line="124" selection-end-column="92" />
+        <state relative-caret-position="361">
+          <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
