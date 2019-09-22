@@ -54,7 +54,7 @@
                                         {{--<div class="wd-60"></div>--}}
                                         {{--<div class="wd-20" style="font-size: 30px;opacity: 0.5" onclick="remove_query({{ $query->id }})">&times;</div>--}}
                                     {{--</div>--}}
-                                    <img src="{{ asset('img/close.png') }}" onclick="remove_query({{ $query->id }})">
+                                    <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 270px;" onclick="remove_query({{ $query->id }})">
                                     <div class="border_bottom1">
                                         <div align="left">
                                             <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
