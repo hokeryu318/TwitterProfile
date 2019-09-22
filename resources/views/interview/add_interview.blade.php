@@ -5,8 +5,7 @@
 <div id="int_input_finish" class="interview_post" style="display: none;">インタビューが完成しました！</div>
 
 
-
-<div>
+<div class="row">
 
     <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
