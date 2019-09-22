@@ -82,8 +82,8 @@
             @endif
 
             <div id="advertise">
+                <div class="sp-40"></div>
                 <div class="advertise">
-                    <div class="sp-40"></div>
                     <p class="ad_text">Adが入るスペース</p>
                     <div class="sp-30"></div>
                 </div>
