@@ -4,9 +4,6 @@
     {{--<div id="interview_post" class="interview_post">インタビューを送信しました！</div>--}}
 {{--@endif--}}
 <input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
-
-<img class="sticky" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="window.location='{{ route("add_interview") }}'">
-
 <div class="container text-center">
 
     <div class="row">
@@ -15,7 +12,7 @@
 
         <div class="col-sm-4 pl-40 pr-40">
 
-
+            <img class="sticky" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="window.location='{{ route("add_interview") }}'">
 
             <div class="sp-20"></div>
             <div class="interview_top">
