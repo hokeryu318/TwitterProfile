@@ -125,7 +125,7 @@
                                     <div class="fs-12" align="left">
                                         <div class="ib w-1">{{ $send->duration }}時間前</div>
                                         {{--<div class="ib" style="font-size: 35px;margin-top: -20px;" onclick="remove_query({{ $send->id }})">&times;</div>--}}
-                                        <img class="ib" src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 270px;" onclick="remove_query({{ $send->id }})">
+                                        <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 0px;" onclick="remove_query({{ $send->id }})">
                                     </div>
                                     <br>
                                     @if($send->mute == 1)

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/resources/views/interview/interview_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/interview_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/query/query_sample.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/query/query_sample.blade.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,13 +124,13 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="28780" />
+          <entry key="php" value="28783" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="17805" />
+          <entry key="Blade" value="17808" />
           <entry key="CSS" value="3033" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -696,12 +695,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="50245000" />
+      <workItem from="1569053819760" duration="50838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="522816000" />
+    <option name="totallyTimeSpent" value="523409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,7 +722,7 @@
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.22421524" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22421524" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32847533" />
       <window_info anchor="bottom" id="Run" order="6" />
