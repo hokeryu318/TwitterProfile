@@ -43,3 +43,8 @@
 
 @include('layout.page_footer')
 
+<script>
+
+    alert('KK');
+</script>
+
