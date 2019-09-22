@@ -23,7 +23,8 @@
                         <img src="{{ asset('img/man2.png') }}">
                         <img src="{{ asset('img/man1.png') }}">
                     @else
-                        <img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;" onclick="window.location='{{ url("interview") }}'">
+                        {{--<img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;" onclick="window.location='{{ url("interview") }}'">--}}
+                        <img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;" onclick="aaa()">
                     @endif
                 </div>
                 <div class="sp-2"></div>
@@ -42,3 +43,10 @@
     </div>
 
 @include('layout.page_footer')
+
+<script>
+    function aaa() {
+        let vh = window.innerHeight;
+        alert(vh);
+    }
+</script>
