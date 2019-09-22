@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 @endif
-            </input>
+            </div>
 
             <div id="advertise">
                 <div class="sp-40"></div>
