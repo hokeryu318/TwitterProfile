@@ -10,7 +10,7 @@
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40">
+        <div class="col-sm-4 pl-40 pr-40" id="cont">
 
             <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
@@ -71,23 +71,23 @@
 
             </div>
 
-            <div class="sp-20"></div>
-
-            <div>
-                <span class="fs-15">
-                    @if(count($query_list) > 5)
+            @if(count($query_list) > 5)
+                <div style="margin-top: 20px;">
+                    <span class="fs-15">
                         もっと見る
-                    @else
+                    </span>
+                </div>
+            @else
+                <div>
+                    <span class="fs-15">
                         &nbsp;
-                    @endif
-                </span>
+                    </span>
+                </div>
+            @endif
+
+            <div class="advertise" style="margin-top: 40px;">
+                <p class="ad_text">Adが入るスペース</p>
             </div>
-
-            <div class="sp-40"></div>
-
-            {{--<div class="advertise">--}}
-            {{--<p class="ad_text">Adが入るスペース</p>--}}
-            {{--</div>--}}
 
         </div>
 
@@ -134,6 +134,11 @@
 @include('layout.page_footer')
 
 <script>
+
+    var screen_height = window.innerHeight;
+    var cont_height = screen_height-115;
+    $('#cont').css({'min-height': cont_height + "px"});
+
     $(document).ready(function(){
         var maxField = 5; //Input fields increment limitation
         var addButton = $('.add_it_btn'); //Add button selector

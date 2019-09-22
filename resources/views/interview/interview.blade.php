@@ -57,13 +57,15 @@
             <div class="sp-20"></div>
 
             <div>
+                @if(count($query_list) > 5)
                 <span class="fs-15">
-                    @if(count($query_list) > 5)
                     もっと見る
-                    @else
-                    &nbsp;
-                    @endif
                 </span>
+                @else
+                <span class="fs-15">
+                    &nbsp;
+                </span>
+                @endif
             </div>
 
             <div class="sp-40"></div>
