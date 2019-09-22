@@ -45,7 +45,7 @@
 
 <script>
     var screen_height = window.innerHeight;
-    var cont_height = screen_height-119;
+    var cont_height = screen_height-116;
     $('#cont').css({'height': cont_height + "px"});
 </script>
 
