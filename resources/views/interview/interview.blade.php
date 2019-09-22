@@ -65,7 +65,7 @@
             <div id="advertise">
                 <div class="sp-40"></div>
                 <div class="advertise">
-                    <p class="ad_text fs-15">Adが入るスペース</p>
+                    <p class="ad_text fs-15">Adが入る<br>スペース</p>
                     <div class="sp-30"></div>
                 </div>
                 <div class="sp-30"></div>
