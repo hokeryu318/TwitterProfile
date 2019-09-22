@@ -15,7 +15,7 @@
             <div id="interview_top">
                 <div class="sp-20"></div>
                 <div class="interview_top">
-                    <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: 9%;">
+                    <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: -6%;">
                         <img src="{{ $user->logo }}" class="avatar" />
                         <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                     </div>
