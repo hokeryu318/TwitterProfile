@@ -87,7 +87,7 @@
 <script>
 
     var screen_height = window.innerHeight;
-    var cont_height = screen_height-117;
+    var cont_height = screen_height-121;
     $('#cont').css({'min-height': cont_height + "px"});
     var cont1_height = cont_height - $('#interview_top').height() - $('#advertise').height();
     $('#cont1').css({'min-height': cont1_height + "px"});
