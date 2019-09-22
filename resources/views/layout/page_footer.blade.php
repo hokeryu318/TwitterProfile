@@ -13,7 +13,7 @@
                             <span class="fs-10">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                             <span class="fs-10">プライバシーポリシー</span>
                         </div>
-                        <br>
+                        <div style="height: 8px;"></div>
                         <div>
                             <span class="fs-10" style="float: left;">&copy 2019 WHO. ALL RIGHTS RESERVED</span>
                         </div>
