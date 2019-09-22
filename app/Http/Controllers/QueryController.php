@@ -67,7 +67,7 @@ class QueryController extends Controller
         $sample_user_id = User::where('url', $full_url)->pluck('id')->first();
 
         $sample_user = User::find($sample_user_id);
-        $sample_query_list = Query::where('receive_user_id', $sample_user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get()->take(5);
+        $sample_query_list = Query::where('receive_user_id', $sample_user_id)->orderby('updated_at', 'desc')->orderby('id', 'desc')->get()->take(5);
         foreach($sample_query_list as $query) {
             $query->logo = User::where('id', $query->send_user_id)->pluck('logo')->first();
         }

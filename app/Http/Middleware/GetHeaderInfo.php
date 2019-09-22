@@ -35,7 +35,7 @@ class GetHeaderInfo
                 ->where(function($q) use ($user_id) {
                     $q->where('send_user_id', $user_id)
                         ->orwhere('receive_user_id', $user_id);
-                })->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+                })->orderby('updated_at', 'desc')->orderby('id', 'desc')->get();
             $query_count = $query_list_tmp->count();
             $query_list = $query_list_tmp->take(5);
             foreach($query_list as $query) {

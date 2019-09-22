@@ -95,7 +95,7 @@ class InterviewController extends Controller
         $mute_list = Mute::where('user1', $user_id)->pluck('user2')->toArray();
 
         //send query data
-        $send_query_list = Query::where('send_user_id', $user_id)->where('receive_user_id', '<>', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        $send_query_list = Query::where('send_user_id', $user_id)->where('receive_user_id', '<>', $user_id)->orderby('updated_at', 'desc')->orderby('id', 'desc')->get();
         foreach($send_query_list as $sendquery) {
             $sendquery->logo = User::where('id', $sendquery->receive_user_id)->pluck('logo')->first();
             $sendquery->duration = $this->differenceInHours($sendquery->created_at, $current_time);
@@ -107,7 +107,7 @@ class InterviewController extends Controller
         }
 
         //receive query data
-        $receive_query_list = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+        $receive_query_list = Query::where('send_user_id', '<>', $user_id)->where('receive_user_id', $user_id)->orderby('updated_at', 'desc')->orderby('id', 'desc')->get();
         foreach($receive_query_list as $receivequery) {
             $receivequery->logo = User::where('id', $receivequery->send_user_id)->pluck('logo')->first();
             $receivequery->duration = $this->differenceInHours($receivequery->created_at, $current_time);
@@ -156,7 +156,7 @@ class InterviewController extends Controller
     {
         $query_id = $request->id;
         $current_time = date("Y-m-d H:i:s");
-        Query::where('id', $query_id)->update(['created_at' => $current_time]);
+        Query::where('id', $query_id)->update(['updated_at' => $current_time]);
 
         return "success";
     }
@@ -194,7 +194,7 @@ class InterviewController extends Controller
         $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)
                           ->where(function($q) use ($user_id) {
                               $q->where('receive_user_id', $user_id);
-                          })->orderby('created_at', 'desc')->orderby('id', 'desc')->get();
+                          })->orderby('updated_at', 'desc')->orderby('id', 'desc')->get();
 //        $query_list_tmp = Query::whereNotIn('send_user_id', $mute_list)->where('receive_user_id', $user_id);
         $query_count = $query_list_tmp->count();
         $query_list = $query_list_tmp->take(5);
