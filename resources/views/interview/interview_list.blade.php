@@ -36,7 +36,7 @@
 
             <div class="sp-40"></div>
 
-            <div class="cont1">
+            <div id="cont1">
                 <div class="tab">
                     <button class="tablinks fs-17" onclick="openCity(event, 'query')" id="defaultOpen">質問</button>
                     <button class="tablinks fs-17" onclick="openCity(event, 'send_query')">送った質問</button>
