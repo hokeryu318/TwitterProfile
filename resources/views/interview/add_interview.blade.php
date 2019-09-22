@@ -4,17 +4,15 @@
 
 <div id="int_input_finish" class="interview_post" style="display: none;">インタビューが完成しました！</div>
 
-<span class="it_finish" align="right" id="interviewfinish">完了</span>
-
 <div class="container text-center">
 
-    <div>
+    <div class="row">
 
         <div class="col-sm-4"></div>
 
         <div class="col-sm-4 pl-40 pr-40">
 
-            {{--<span class="it_finish" align="right" id="interviewfinish">完了</span>--}}
+            <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
             <div class="sp-20"></div>
             <div class="interview_top" style="opacity: 0.2;">
@@ -37,7 +35,7 @@
             </div>
 
             <div class="hg-cont-1">
-            <div class="sp-20"></div>
+                <div class="sp-20"></div>
 
                 <span class="add_it_btn fs-15" >+&nbsp;&nbsp;&nbsp;インタビューを追加</span>
                 <div class="sp-40"></div>
@@ -78,9 +76,9 @@
             <div>
                 <span class="fs-15">
                     @if(count($query_list) > 5)
-                    もっと見る
+                        もっと見る
                     @else
-                    &nbsp;
+                        &nbsp;
                     @endif
                 </span>
             </div>
@@ -88,7 +86,7 @@
             <div class="sp-40"></div>
 
             {{--<div class="advertise">--}}
-                {{--<p class="ad_text">Adが入るスペース</p>--}}
+            {{--<p class="ad_text">Adが入るスペース</p>--}}
             {{--</div>--}}
 
         </div>
@@ -190,7 +188,7 @@
         if (value.length >= 2) {
             $('#int_input_plz').fadeIn(1000).fadeOut(1000);
         } else {
-            $('#int_input_finish').fadeIn(2000);
+            $('#int_input_finish').fadeIn(200);
             document.interview_finish.submit();
         }
     });
