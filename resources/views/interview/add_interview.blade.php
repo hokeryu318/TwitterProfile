@@ -12,7 +12,7 @@
 
         <div class="col-sm-4 pl-40 pr-40" id="cont">
 
-            <span class="it_finish fs-15" align="right" id="interviewfinish">完了</span>
+            <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
             <div id="interview_top">
                 <div class="sp-20"></div>
