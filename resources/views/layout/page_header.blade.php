@@ -33,8 +33,6 @@
 
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-
-
     </head>
     <body>
     <div style="min-height: 100vh;position: relative;height: calc(var(--vh, 1vh) * 100);">
@@ -95,7 +93,8 @@
             </div>
             {{--@if(session('login_flag') == 1)--}}
             @if(Auth::check())
-                <a href="{{ url('query_view/'.md5($user->id)) }}"><img src="{{ asset('img/home.png') }}" class="vm"><span class="vm" style="margin-left: 10px;padding-top: 15px;">ホーム</span></a>
+                {{--<a href="{{ url('query_view/'.md5($user->id)) }}"><img src="{{ asset('img/home.png') }}" class="vm"><span class="vm" style="margin-left: 10px;padding-top: 15px;">ホーム</span></a>--}}
+                <a href="{{ url('/') }}"><img src="{{ asset('img/home.png') }}" class="vm"><span class="vm" style="margin-left: 10px;padding-top: 15px;">ホーム</span></a>
                 <a href="{{ route('interview_list') }}"><img src="{{ asset('img/mic.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">質問たち</span></a>
                 <a href="{{ route('interview') }}"><img src="{{ asset('img/pen.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">作成・編集</span></a>
                 <a href="{{ url('/logout') }}"><img src="{{ asset('img/logout.png') }}" class="vm"><span class="vm" style="margin-left: 10px;">ログアウト</span></a>

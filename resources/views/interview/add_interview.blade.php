@@ -190,7 +190,7 @@
         if (value.length >= 2) {
             $('#int_input_plz').fadeIn(1000).fadeOut(1000);
         } else {
-            $('#int_input_finish').fadeIn(200);
+            $('#int_input_finish').fadeIn(2000);
             document.interview_finish.submit();
         }
     });

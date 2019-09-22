@@ -7,9 +7,14 @@
                 <div class="sp-0"></div>
                 <div>
                     <div class="sp-1"></div>
+                    {{--<p>インタビューに答えて</p>--}}
+                    @if(Auth::check())
+                    <p>自分も作る / 編集する</p>
+                    @else
                     <p>インタビューに答えて</p>
+                    @endif
                     <div class="sp-1"></div>
-                    <p>この文章はダミーコピーです。</p>
+                    {{--<p>この文章はダミーコピーです。</p>--}}
                     <div class="sp-1"></div>
                 </div>
                 <div class="sp-1"></div>
@@ -18,7 +23,7 @@
                         <img src="{{ asset('img/man2.png') }}">
                         <img src="{{ asset('img/man1.png') }}">
                     @else
-                        <img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;">
+                        <img src="{{ $user->logo }}" style="width: 70px;border-radius: 50%;" onclick="window.location='{{ url("interview") }}'">
                     @endif
                 </div>
                 <div class="sp-2"></div>
