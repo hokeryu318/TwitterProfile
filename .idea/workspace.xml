@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/interview/interview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/interview/interview.blade.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,20 +119,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="3031" />
+          <entry key="css" value="3033" />
           <entry key="dummy" value="30" />
           <entry key="env" value="34" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="28316" />
+          <entry key="php" value="28363" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="17344" />
-          <entry key="CSS" value="3031" />
+          <entry key="Blade" value="17391" />
+          <entry key="CSS" value="3033" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
           <entry key="PHP" value="10967" />
@@ -221,8 +221,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="829" column="23" lean-forward="true" selection-start-line="829" selection-start-column="23" selection-end-line="829" selection-end-column="23" />
+            <state relative-caret-position="459">
+              <caret line="403" column="9" lean-forward="true" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -267,8 +267,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+            <state relative-caret-position="286">
+              <caret line="56" column="116" selection-start-line="56" selection-start-column="116" selection-end-line="56" selection-end-column="116" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
@@ -301,7 +301,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>url(&quot;query_view</find>
       <find>tweet</find>
       <find>auth/redirect</find>
       <find>interview_modal</find>
@@ -331,6 +330,7 @@
       <find>twittlo</find>
       <find>who</find>
       <find>100vh</find>
+      <find>close</find>
     </findStrings>
     <replaceStrings>
       <replace>fs-15</replace>
@@ -398,8 +398,8 @@
         <option value="$PROJECT_DIR$/resources/views/layout/page_footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/page_header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/twittlogin.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/interview/interview.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/interview/add_interview.blade.php" />
       </list>
     </option>
@@ -672,12 +672,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="38865000" />
+      <workItem from="1569053819760" duration="39890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511436000" />
+    <option name="totallyTimeSpent" value="512461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1104,13 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="829" column="23" lean-forward="true" selection-start-line="829" selection-start-column="23" selection-end-line="829" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/interview.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -1127,10 +1120,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="403" column="9" lean-forward="true" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/interview/add_interview.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="86" column="53" selection-start-line="86" selection-start-column="53" selection-end-line="86" selection-end-column="53" />
+        <state relative-caret-position="286">
+          <caret line="56" column="116" selection-start-line="56" selection-start-column="116" selection-end-line="56" selection-end-column="116" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
