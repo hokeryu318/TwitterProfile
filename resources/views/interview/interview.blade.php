@@ -24,9 +24,9 @@
                     <div class="ib vm" style="width: 1%;"></div>
                     <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
                         <div style="width: 120%; margin-bottom: 32px;">
-                            <span style="float: left;margin-left: 10px;font-size: 17px;">{{ $user->name }}さんの</span>
+                            <span style="float: left;margin-left: 10px;font-size: 15px;">{{ $user->name }}さんの</span>
                             <br>
-                            <span style="float: left;margin-left: 10px;font-size: 17px;">インタビュー数{{ $query_count }}</span>
+                            <span style="float: left;margin-left: 10px;font-size: 15px;">インタビュー数{{ $query_count }}</span>
                         </div>
                         <div class="interview_share" onclick="interview_modal(2)">
                             <span><img src="{{ asset('img/share.png') }}"></span>
@@ -42,12 +42,12 @@
                 <div class="border_bottom">
                     <div align="left">
                         <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
-                        <span class="vm fs-17" style="word-break: break-all;">{{ $query->query }}</span>
+                        <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
                         {{--<img onclick="" class="vm" src="{{ asset('img/pen.png') }}" sytle="right: 5px;">--}}
                     </div>
                     <div class="sp-20"></div>
                     <div align="left">
-                        <span class="fs-17" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
+                        <span class="fs-15" style="padding-left: 20px;word-break: break-all;">{{ $query->answer }}</span>
                     </div>
                     <div class="sp-40"></div>
                 </div>
@@ -56,7 +56,7 @@
 
             @if(count($query_list) > 5)
                 <div style="margin-top: 20px;">
-                    <span class="fs-17">
+                    <span class="fs-15">
                         もっと見る
                     </span>
                 </div>
@@ -65,7 +65,7 @@
             <div id="advertise">
                 <div class="sp-40"></div>
                 <div class="advertise">
-                    <p class="ad_text fs-17">Adが入るスペース</p>
+                    <p class="ad_text fs-15">Adが入るスペース</p>
                     <div class="sp-30"></div>
                 </div>
                 <div class="sp-30"></div>
