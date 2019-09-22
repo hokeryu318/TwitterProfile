@@ -84,7 +84,7 @@
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
+        <div class="col-sm-4 pl-40 pr-40">
             <div class="advertise">
                 <p class="ad_text">Adが入るスペース</p>
             </div>
