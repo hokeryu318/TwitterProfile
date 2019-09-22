@@ -6,11 +6,11 @@
 
 <div class="container text-center">
 
-    <div class="row hg-cont-0">
+    <div class="row">
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40 hg-cont-0">
+        <div class="col-sm-4 pl-40 pr-40">
 
             {{--<span class="it_finish" align="right" id="interviewfinish" onclick="interviewfinish()">完了</span>--}}
             <span class="it_finish" align="right" id="interviewfinish">完了</span>
