@@ -12,7 +12,7 @@
 
         <div class="col-sm-4 pl-40 pr-40" id="cont">
 
-            <span class="it_finish" align="right" id="interviewfinish">完了</span>
+            <span class="it_finish fs-17" align="right" id="interviewfinish">完了</span>
 
             <div id="interview_top">
                 <div class="sp-20"></div>
@@ -24,9 +24,9 @@
                     <div class="ib vm" style="width: 1%;"></div>
                     <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
                         <div style="width: 120%; margin-bottom: 32px;">
-                            <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
+                            <span style="float: left;margin-left: 10px;font-size: 17px;">{{ $user->name }}さんの</span>
                             <br>
-                            <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+                            <span style="float: left;margin-left: 10px;font-size: 17px;">インタビュー数{{ $query_count }}</span>
                         </div>
                         <div class="interview_share">
                             <span><img src="{{ asset('img/share.png') }}"></span>
@@ -39,7 +39,7 @@
             <div id="cont1">
                 <div class="sp-20"></div>
 
-                <span class="add_it_btn fs-15" >+&nbsp;&nbsp;&nbsp;インタビューを追加</span>
+                <span class="add_it_btn fs-17" >+&nbsp;&nbsp;&nbsp;インタビューを追加</span>
                 <div class="sp-40"></div>
                 <form name="interview_finish" action="{{ route('interview_finish') }}" method="post">
                     @csrf
@@ -84,7 +84,7 @@
             <div id="advertise">
                 <div class="sp-40"></div>
                 <div class="advertise">
-                    <p class="ad_text">Adが入るスペース</p>
+                    <p class="ad_text fs-17">Adが入るスペース</p>
                     <div class="sp-30"></div>
                 </div>
                 <div class="sp-30"></div>
@@ -120,7 +120,7 @@
 <script>
 
     var screen_height = window.innerHeight;
-    var cont_height = screen_height-117;
+    var cont_height = screen_height-118;
     $('#cont').css({'min-height': cont_height + "px"});
     var cont1_height = cont_height - $('#interview_top').height() - $('#advertise').height();
     $('#cont1').css({'min-height': cont1_height + "px"});
