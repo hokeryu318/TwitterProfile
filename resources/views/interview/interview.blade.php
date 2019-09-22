@@ -14,29 +14,29 @@
 
             <img class="sticky" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="window.location='{{ route("add_interview") }}'">
 
-            <div class="sp-20"></div>
-            <div class="interview_top">
-
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
-                    <img src="{{ $user->logo }}" class="avatar" />
-                    <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
-                </div>
-                <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
-                    <div style="width: 120%; margin-bottom: 32px;">
-                        <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
-                        <br>
-                        <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+            <div id="interview_top">
+                <div class="sp-20"></div>
+                <div class="interview_top">
+                    <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
+                        <img src="{{ $user->logo }}" class="avatar" />
+                        <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                     </div>
-                    <div class="interview_share" onclick="interview_modal(2)">
-                        <span><img src="{{ asset('img/share.png') }}"></span>
-                        <span>インタビューをシェア</span>
+                    <div class="ib vm" style="width: 1%;"></div>
+                    <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
+                        <div style="width: 120%; margin-bottom: 32px;">
+                            <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
+                            <br>
+                            <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+                        </div>
+                        <div class="interview_share" onclick="interview_modal(2)">
+                            <span><img src="{{ asset('img/share.png') }}"></span>
+                            <span>インタビューをシェア</span>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
-            <div class="hg-cont-1">
+            <div id="cont1">
             @foreach($query_list as $query)
                 <div class="sp-40"></div>
                 <div class="border_bottom">
@@ -54,24 +54,21 @@
             @endforeach
             </div>
 
-            <div class="sp-20"></div>
+            @if(count($query_list) > 5)
+                <div style="margin-top: 20px;">
+                    <span class="fs-15">
+                        もっと見る
+                    </span>
+                </div>
+            @endif
 
-            <div>
-                @if(count($query_list) > 5)
-                <span class="fs-15">
-                    もっと見る
-                </span>
-                @else
-                <span class="fs-15">
-                    &nbsp;
-                </span>
-                @endif
-            </div>
-
-            <div class="sp-40"></div>
-
-            <div class="advertise">
-                <p class="ad_text">Adが入るスペース</p>
+            <div id="advertise">
+                <div class="sp-40"></div>
+                <div class="advertise">
+                    <p class="ad_text">Adが入るスペース</p>
+                    <div class="sp-30"></div>
+                </div>
+                <div class="sp-30"></div>
             </div>
 
         </div>
@@ -90,8 +87,10 @@
 <script>
 
     var screen_height = window.innerHeight;
-    var cont_height = screen_height-115;
+    var cont_height = screen_height-117;
     $('#cont').css({'min-height': cont_height + "px"});
+    var cont1_height = cont_height - $('#interview_top').height() - $('#advertise').height();
+    $('#cont1').css({'min-height': cont1_height + "px"});
 
     function interview_modal(op){
 
