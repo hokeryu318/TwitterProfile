@@ -30,7 +30,7 @@
                 @if(!(Auth::check()))
                 <div onclick="window.location='{{ url("/auth/redirect/twitter") }}'">
                     <div class="twittlogin">
-                        <span><img src="{{ asset('img/twitter_icon.png') }}"></span>
+                        <span><img src="{{ asset('img/twitter_icon.png') }}" style="margin-top: -5px;"></span>
                         <span class="fs-17">Twitterでログイン</span>
                     </div>
                 </div>
