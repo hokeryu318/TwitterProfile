@@ -636,7 +636,7 @@ body {
 .sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: calc(100vh - 70px);
+    top: calc(100vh - 120px);
     margin-bottom: 20px;
     z-index: 1;
 }
