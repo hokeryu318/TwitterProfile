@@ -8,7 +8,7 @@
 
 <div class="container text-center">
 
-    <div class="row">
+    <div>
 
         <div class="col-sm-4"></div>
 
