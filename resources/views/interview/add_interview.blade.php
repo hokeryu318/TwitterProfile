@@ -4,114 +4,120 @@
 
 <div id="int_input_finish" class="interview_post" style="display: none;">インタビューが完成しました！</div>
 
-<span class="it_finish" align="right" id="interviewfinish">完了</span>
 
-<div class="container text-center">
 
-    <div class="row">
+<div>
 
-        <div class="col-sm-4"></div>
+    <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
-        <div class="col-sm-4 pl-40 pr-40">
+    <div class="container text-center">
 
-            {{--<span class="it_finish" align="right" id="interviewfinish">完了</span>--}}
+        <div class="row">
 
-            <div class="sp-20"></div>
-            <div class="interview_top" style="opacity: 0.2;">
-                <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
-                    <img src="{{ $user->logo }}" class="avatar" />
-                    <div class="query_collect">質問を募集</div>
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4 pl-40 pr-40">
+
+                {{--<span class="it_finish" align="right" id="interviewfinish">完了</span>--}}
+
+                <div class="sp-20"></div>
+                <div class="interview_top" style="opacity: 0.2;">
+                    <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
+                        <img src="{{ $user->logo }}" class="avatar" />
+                        <div class="query_collect">質問を募集</div>
+                    </div>
+                    <div class="ib vm" style="width: 1%;"></div>
+                    <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
+                        <div style="width: 120%; margin-bottom: 32px;">
+                            <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
+                            <br>
+                            <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
+                        </div>
+                        <div class="interview_share">
+                            <span><img src="{{ asset('img/share.png') }}"></span>
+                            <span>インタビューをシェア</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="ib vm" style="width: 1%;"></div>
-                <div class="ib vm" style="width: 40%; margin-bottom: 15px;margin-top: 15px;">
-                    <div style="width: 120%; margin-bottom: 32px;">
-                        <span style="float: left;margin-left: 10px;">{{ $user->name }}さんの</span>
-                        <br>
-                        <span style="float: left;margin-left: 10px;">インタビュー数{{ $query_count }}</span>
-                    </div>
-                    <div class="interview_share">
-                        <span><img src="{{ asset('img/share.png') }}"></span>
-                        <span>インタビューをシェア</span>
-                    </div>
+
+                <div class="hg-cont-1">
+                    <div class="sp-20"></div>
+
+                    <span class="add_it_btn fs-15" >+&nbsp;&nbsp;&nbsp;インタビューを追加</span>
+                    <div class="sp-40"></div>
+                    <form name="interview_finish" action="{{ route('interview_finish') }}" method="post">
+                        @csrf
+                        <input type="hidden" id="deleted_ids" name="deleted_ids[]">
+                        <div class="field_wrapper" id="field_wrapper">
+                            @if($query_list)
+                                @foreach($query_list as $key => $query)
+                                    <div id="add_{{ $query->id }}">
+                                        <div class="sp-10"></div>
+                                        <div class="row">
+                                            <div class="wd-20"></div>
+                                            <div class="wd-60"></div>
+                                            <div class="wd-20" style="font-size: 30px;opacity: 0.5" onclick="remove_query({{ $query->id }})">&times;</div>
+                                        </div>
+                                        <div class="border_bottom1">
+                                            <div align="left">
+                                                <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
+                                                <input type="text" class="fs-15 add_it_input query-text" value="{{ $query->query }}" name="query_text[]" />
+                                                <input type="hidden" class="query-id" value="{{ $query->id }}" name="query_id[]"/>
+                                            </div>
+                                            <div class="sp-20"></div>
+                                            <div align="left">
+                                                <textarea type="text" class="fs-15 add_id_textarea" id="an_{{ $key }}" name="answer[]" rows="3">{{ $query->answer }}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </form>
+
                 </div>
-            </div>
 
-            <div class="hg-cont-1">
-            <div class="sp-20"></div>
+                <div class="sp-20"></div>
 
-                <span class="add_it_btn fs-15" >+&nbsp;&nbsp;&nbsp;インタビューを追加</span>
-                <div class="sp-40"></div>
-                <form name="interview_finish" action="{{ route('interview_finish') }}" method="post">
-                    @csrf
-                    <input type="hidden" id="deleted_ids" name="deleted_ids[]">
-                    <div class="field_wrapper" id="field_wrapper">
-                        @if($query_list)
-                            @foreach($query_list as $key => $query)
-                                <div id="add_{{ $query->id }}">
-                                    <div class="sp-10"></div>
-                                    <div class="row">
-                                        <div class="wd-20"></div>
-                                        <div class="wd-60"></div>
-                                        <div class="wd-20" style="font-size: 30px;opacity: 0.5" onclick="remove_query({{ $query->id }})">&times;</div>
-                                    </div>
-                                    <div class="border_bottom1">
-                                        <div align="left">
-                                            <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
-                                            <input type="text" class="fs-15 add_it_input query-text" value="{{ $query->query }}" name="query_text[]" />
-                                            <input type="hidden" class="query-id" value="{{ $query->id }}" name="query_id[]"/>
-                                        </div>
-                                        <div class="sp-20"></div>
-                                        <div align="left">
-                                            <textarea type="text" class="fs-15 add_id_textarea" id="an_{{ $key }}" name="answer[]" rows="3">{{ $query->answer }}</textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endif
-                    </div>
-                </form>
-
-            </div>
-
-            <div class="sp-20"></div>
-
-            <div>
+                <div>
                 <span class="fs-15">
                     @if(count($query_list) > 5)
-                    もっと見る
+                        もっと見る
                     @else
-                    &nbsp;
+                        &nbsp;
                     @endif
                 </span>
-            </div>
+                </div>
 
-            <div class="sp-40"></div>
+                <div class="sp-40"></div>
 
-            {{--<div class="advertise">--}}
+                {{--<div class="advertise">--}}
                 {{--<p class="ad_text">Adが入るスペース</p>--}}
-            {{--</div>--}}
+                {{--</div>--}}
 
-        </div>
-
-        <div class="col-sm-4"></div>
-    </div>
-</div>
-
-<div class="container text-center">
-
-    <div class="row">
-
-        <div class="col-sm-4"></div>
-
-        <div class="col-sm-4 pl-40 pr-40">
-            <div class="advertise">
-                <p class="ad_text">Adが入るスペース</p>
             </div>
+
+            <div class="col-sm-4"></div>
         </div>
-
-        <div class="col-sm-4"></div>
-
     </div>
+
+    <div class="container text-center">
+
+        <div class="row">
+
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4 pl-40 pr-40">
+                <div class="advertise">
+                    <p class="ad_text">Adが入るスペース</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4"></div>
+
+        </div>
+    </div>
+
 </div>
 
 <div id="add_text" style="display: none;">
