@@ -15,6 +15,7 @@
             <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
             <div class="interview_top" id="interview_top">
+                <div class="sp-20"></div>
                 <div class="ib vm" style="width: 30%;margin-top: 15px;margin-bottom: 15px;margin-left: 9%;">
                     <img src="{{ $user->logo }}" class="avatar" />
                     <div class="query_collect">質問を募集</div>
@@ -79,7 +80,9 @@
             @endif
 
             <div class="advertise" id="advertise">
+                <div class="sp-40"></div>
                 <p class="ad_text">Adが入るスペース</p>
+                <div class="sp-30"></div>
             </div>
 
         </div>
@@ -110,7 +113,7 @@
 @include('layout.page_footer')
 
 <script>
-
+alert($('#interview_top').height);
     var screen_height = window.innerHeight;
     var cont_height = screen_height-115;
     $('#cont').css({'min-height': cont_height + "px"});
