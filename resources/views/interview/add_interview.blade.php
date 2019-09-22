@@ -179,8 +179,8 @@
         if (value.length >= 2) {
             $('#int_input_plz').fadeIn(2000).fadeOut(2000);
         } else {
-            $('#int_input_finish').fadeIn(5000).fadeOut(5000);
-            document.interview_finish.submit();
+            $('#int_input_finish').fadeIn(2000).fadeOut(2000);
+            window.setTimeout(function() { document.interview_finish.submit(); }, 2000);
         }
     });
 
