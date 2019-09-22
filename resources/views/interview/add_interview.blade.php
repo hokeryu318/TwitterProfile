@@ -177,9 +177,9 @@
         });
         console.log(value.length);
         if (value.length >= 2) {
-            $('#int_input_plz').fadeIn(1000).fadeOut(1000);
+            $('#int_input_plz').fadeIn(2000).fadeOut(2000);
         } else {
-            $('#int_input_finish').fadeIn(1000);
+            $('#int_input_finish').fadeIn(2000);
             document.interview_finish.submit();
         }
     });
