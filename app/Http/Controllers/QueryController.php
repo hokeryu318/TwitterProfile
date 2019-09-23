@@ -6,6 +6,7 @@ use App\Model\Query;
 use App\Model\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Routing\Route;
 
 
 class QueryController extends Controller
