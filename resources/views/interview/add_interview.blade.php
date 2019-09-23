@@ -178,8 +178,10 @@
         });
         console.log(value.length);
         if (value.length >= 2) {
+            window.scrollTo(x-coord, y-coord);
             $('#int_input_plz').fadeIn(2000).fadeOut(2000);
         } else {
+            window.scrollTo(x-coord, y-coord);
             $('#int_input_finish').fadeIn(2000).fadeOut(2000);
             window.setTimeout(function() { document.interview_finish.submit(); }, 2000);
         }
