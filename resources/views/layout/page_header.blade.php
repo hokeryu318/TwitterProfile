@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    @if(url()->current().containsString('query_view'))
+    @if(Route::getCurrentRoute()->getPath() == 'query_sample')
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@jiuhejong" />
         <meta name="twitter:creator" content="@jiuhejong" }} />
