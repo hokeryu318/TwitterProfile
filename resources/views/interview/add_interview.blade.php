@@ -7,12 +7,12 @@
 <div class="container text-center">
 
     <div class="row">
-
+        <div id="int_input_finish" class="interview_post" style="display: none;"><span class="fs-15">インタビューが完成しました！</span></div>
         <div class="col-sm-4"></div>
 
         <div class="col-sm-4 pl-40 pr-40" id="cont">
 
-            <div id="int_input_finish" class="interview_post" style="display: none;"><span class="fs-15">インタビューが完成しました！</span></div>
+
 
             <span class="it_finish" align="right" id="interviewfinish">完了</span>
 
