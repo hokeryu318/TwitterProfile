@@ -41,7 +41,7 @@ class SocialAuthTwitterController extends Controller
 
     function logout() {
         auth()->logout();
-        request()->session()->put('redirect', route('/'));
+        request()->session()->put('redirect', route('twittlogin'));
         return redirect()->route('twittlogin');
     }
 }
