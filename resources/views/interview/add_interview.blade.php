@@ -2,7 +2,7 @@
 
 <div id="int_input_plz" class="int_input_plz" style="display: none;"><span class="fs-15">インタビューを入力してください</span></div>
 
-<div id="int_input_finish" class="interview_post" style="display: none;"><span class="fs-15">インタビューが完成しました！</span></div>
+<div id="int_input_finish" class="interview_post" style=""><span class="fs-15">インタビューが完成しました！</span></div>
 
 <div class="container text-center">
 
