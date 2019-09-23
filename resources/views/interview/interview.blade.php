@@ -3,7 +3,7 @@
 {{--@if($interview_post_flag == 1)--}}
     {{--<div id="interview_post" class="interview_post">インタビューを送信しました！</div>--}}
 {{--@endif--}}
-<p id="copy_url" value="" style="margin-top:-1000px;position: absolute;"></p>
+<input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
 <div class="container text-center">
 
     <div class="row">
@@ -111,11 +111,17 @@
         var user = <?php echo(json_encode($user)) ?>;
 
         //copy
-        var copyUrl = document.getElementById('copy_url');
-        copyUrl.value = user.url;alert(copyUrl.value);
+        // var copyUrl = document.getElementById('copy_url');
+        // copyUrl.value = user.url;
         // copyUrl.select();
         // copyUrl.setSelectionRange(0, 99999);
         // document.execCommand("copy");
+
+        var elem = document.createElement("textarea");
+        document.body.appendChild(elem);
+        elem.value = user.url;
+        elem.select();
+        document.execCommand("copy");
 
         $.ajax({
             type:"GET",
