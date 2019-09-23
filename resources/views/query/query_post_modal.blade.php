@@ -29,8 +29,10 @@
             url:"{{ route('query_post') }}",
             data:{sample_user_id: sample_user_id, new_query: new_query, _token:"{{ csrf_token() }}"},
             success: function(result){
-                if(result == 1)
+                if(result == 1) {
+                    $(window).scrollTop(0);
                     $('#interview_post').fadeIn(2000).fadeOut(2000);
+                }
             }
         });
         $("#myModal").modal("toggle");
