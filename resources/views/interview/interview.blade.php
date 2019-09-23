@@ -112,10 +112,10 @@
 
         //copy
         var copyUrl = document.getElementById('copy_url');
-        copyUrl.value = user.url;
-        copyUrl.select();
-        copyUrl.setSelectionRange(0, 99999);
-        document.execCommand("copy");
+        copyUrl.value = user.url;alert(copyUrl.value);
+        // copyUrl.select();
+        // copyUrl.setSelectionRange(0, 99999);
+        // document.execCommand("copy");
 
         $.ajax({
             type:"GET",
