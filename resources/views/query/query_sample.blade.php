@@ -51,9 +51,9 @@
 
                 @if(count($sample_query_list) > 5)
                     <div style="margin-top: 20px;">
-                    <span class="fs-15">
-                        もっと見る
-                    </span>
+                        <span class="fs-15">
+                            もっと見る
+                        </span>
                     </div>
                 @endif
 

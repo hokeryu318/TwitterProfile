@@ -9,7 +9,7 @@
 
         <div class="col-sm-4"></div>
 
-        <div class="col-sm-4 pl-40 pr-40">
+        <div class="col-sm-4 pl-40 pr-40" id="cont">
             <img class="sticky display-none" align="right" src="{{ asset('img/pen1.png') }}" width="50px" height="50px" onclick="">
 
             <div id="interview_top">
