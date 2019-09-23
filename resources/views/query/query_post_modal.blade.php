@@ -6,7 +6,11 @@
         <div class="modal-content tlm">
             <div class="modal-header" style="border-bottom: 0px;">
                 <img src="{{ $sample_user_logo }}" style="width: 35px;border-radius:50%;margin-right:20px;">
-                <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さんへインタビュー</span>
+                @if(strlen($sample_user_name) > 7)
+                    <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さん<br>へインタビュー</span>
+                @else
+                    <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さんへインタビュー</span>
+                @endif
             </div>
             <div class="modal-body" style="padding: 0px;">
                 <textarea type="text" class="query_input wd-90 mar_left_5" id="new_query" name="new_query" rows="5"></textarea>
