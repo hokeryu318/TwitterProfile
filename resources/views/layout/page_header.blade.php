@@ -75,7 +75,7 @@
                     <div class="se_top_menu">
                     {{--@if(session('login_flag') == 1)--}}
                     @if(Auth::check())
-                        <span style="margin-left: 10px;padding-top: 15px;" onclick="window.location='{{ url('query_view/'.md5($user->id)) }}'">ホーム&nbsp;</span>
+                        <span style="margin-left: 10px;padding-top: 15px;" onclick="window.location='{{ url('/') }}'">ホーム&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ route("interview_list") }}'">質問たち&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ route("interview") }}'">作成・編集&nbsp;</span>
                         <span style="margin-left: 10px;" onclick="window.location='{{ url('/logout') }}'">ログアウト</span>
