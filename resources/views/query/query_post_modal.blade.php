@@ -7,7 +7,7 @@
             <div class="modal-header" style="border-bottom: 0px;">
                 <img src="{{ $sample_user_logo }}" style="width: 35px;border-radius:50%;margin-right:20px;">
                 @if(strlen($sample_user_name) > 7)
-                    <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さん<br>へインタビュー</span>
+                    <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さんへ<br>インタビュー</span>
                 @else
                     <span style="margin:9px 0 0 -40px;">{{ $sample_user_name }}さんへインタビュー</span>
                 @endif
