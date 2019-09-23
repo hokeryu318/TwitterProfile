@@ -2,9 +2,9 @@
 
 <div id="int_input_plz" class="int_input_plz" style="display: none;"><span class="fs-15">インタビューを入力してください</span></div>
 
-<div id="int_input_finish" class="interview_post" style=""><span class="fs-15">インタビューが完成しました！</span></div>
+<div id="int_input_finish" class="interview_post" style="display: none;"><span class="fs-15">インタビューが完成しました！</span></div>
 
-<div class="container text-center">
+<div class="container text-center" id="container">
 
     <div class="row">
 
@@ -182,6 +182,12 @@
             $('#int_input_plz').fadeIn(2000).fadeOut(2000);
         } else {
             $(window).scrollTop(0);
+            var screen_width = window.innerWidth;
+            var con_width = $('#container').width();
+            var margin = (screen_width - con_width) / 2;
+            $('#int_input_finish').css({'width': con_width + "px"});
+            $('#int_input_finish').css({'margin-left': marginmargin + "px"});
+            $('#int_input_finish').css({'margin-right': con_width + "px"});
             $('#int_input_finish').fadeIn(2000).fadeOut(2000);
             window.setTimeout(function() { document.interview_finish.submit(); }, 2000);
         }
