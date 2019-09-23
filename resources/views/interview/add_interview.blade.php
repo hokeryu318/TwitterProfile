@@ -182,12 +182,12 @@
             $('#int_input_plz').fadeIn(2000).fadeOut(2000);
         } else {
             $(window).scrollTop(0);
-            var screen_width = window.innerWidth;
-            var con_width = $('#container').width();
-            var margin = (screen_width - con_width) / 2;
-            $('#int_input_finish').css({'width': (screen_width / 3) + "px"});
-            $('#int_input_finish').css({'margin-left': (screen_width / 3) + "px"});
-            $('#int_input_finish').css({'margin-right': (screen_width / 3) + "px"});
+            // var screen_width = window.innerWidth;
+            // var con_width = $('#container').width();
+            // var margin = (screen_width - con_width) / 2;
+            // $('#int_input_finish').css({'width': (screen_width / 3) + "px"});
+            // $('#int_input_finish').css({'margin-left': (screen_width / 3) + "px"});
+            // $('#int_input_finish').css({'margin-right': (screen_width / 3) + "px"});
             $('#int_input_finish').fadeIn(2000).fadeOut(2000);
             window.setTimeout(function() { document.interview_finish.submit(); }, 2000);
         }
