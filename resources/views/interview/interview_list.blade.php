@@ -2,7 +2,7 @@
 
 <div id="answer_post" class="interview_post" style="display: none;">インタビューに答えました。！</div>
 
-<input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>
+{{--<input type="text" id="copy_url" value="" style="margin-top:-1000px;position: absolute;"/>--}}
 <div class="container text-center">
 
     <div class="row">
@@ -245,10 +245,16 @@
         var user = <?php echo(json_encode($user)) ?>;
 
         //alert(user.url);
-        var copyUrl = document.getElementById('copy_url');
-        copyUrl.value = user.url;
-        copyUrl.select();
-        copyUrl.setSelectionRange(0, 99999);
+        // var copyUrl = document.getElementById('copy_url');
+        // copyUrl.value = user.url;
+        // copyUrl.select();
+        // copyUrl.setSelectionRange(0, 99999);
+        // document.execCommand("copy");
+
+        var elem = document.createElement("textarea");
+        document.body.appendChild(elem);
+        elem.value = user.url;
+        elem.select();
         document.execCommand("copy");
 
         $.ajax({
