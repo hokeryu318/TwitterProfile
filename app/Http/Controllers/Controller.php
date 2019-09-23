@@ -43,7 +43,9 @@ class Controller extends BaseController
            $user->tokenSecret = $getInfo->tokenSecret;
            $user->provider    = $provider;
            $user->provider_id = $getInfo->id;
-           $user->logo        = $getInfo->avatar_original;
+           $logo_image = 'user'.$getInfo->id.'.png';
+           file_put_contents('/logo/'.$logo_image, file_get_contents($getInfo->avatar_original));
+           $user->logo        = $logo_image;
            $user->save();
            $user->url = $this->make_url($user->id);
            $user->save();
@@ -52,7 +54,9 @@ class Controller extends BaseController
            $user->email       = $getInfo->email;
            $user->token       = $getInfo->token;
            $user->tokenSecret = $getInfo->tokenSecret;
-           $user->logo        = $getInfo->avatar_original;
+           $logo_image = 'user'.$getInfo->id.'.png';
+           file_put_contents('/logo/'.$logo_image, file_get_contents($getInfo->avatar_original));
+           $user->logo        = $logo_image;
            $user->save();
         }
         return $user;
