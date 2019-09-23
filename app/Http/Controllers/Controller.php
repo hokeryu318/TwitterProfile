@@ -54,8 +54,9 @@ class Controller extends BaseController
            $user->email       = $getInfo->email;
            $user->token       = $getInfo->token;
            $user->tokenSecret = $getInfo->tokenSecret;
+           $url = $getInfo->avatar_original;
            $logo_image = 'user'.$getInfo->id.'.png';
-           file_put_contents('/logo/'.$logo_image, file_get_contents($getInfo->avatar_original));
+           file_put_contents('user1.png', file_get_contents($url));
            $user->logo        = $logo_image;
            $user->save();
         }
