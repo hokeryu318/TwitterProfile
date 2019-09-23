@@ -186,8 +186,8 @@
             var con_width = $('#container').width();
             var margin = (screen_width - con_width) / 2;
             $('#int_input_finish').css({'width': con_width + "px"});
-            $('#int_input_finish').css({'margin-left': marginmargin + "px"});
-            $('#int_input_finish').css({'margin-right': con_width + "px"});
+            $('#int_input_finish').css({'margin-left': margin + "px"});
+            $('#int_input_finish').css({'margin-right': margin + "px"});
             $('#int_input_finish').fadeIn(2000).fadeOut(2000);
             window.setTimeout(function() { document.interview_finish.submit(); }, 2000);
         }
