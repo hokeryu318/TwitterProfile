@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@'@if(Auth::check()) {{ $user->name }} @endif'" />
-        <meta name="twitter:creator" content="@'@if(Auth::check()) {{ $user->name }} @endif'" />
-        <meta property="og:url" content="'@if(Auth::check()) {{ $user->url }} @endif'" />
+        <meta name="twitter:site" content="@{{ $sample_user->name }}" />
+        <meta name="twitter:creator" content="@{{ $sample_user->name }}" />
+        <meta property="og:url" content="{{ $sample_user->url }}" />
         <meta property="og:title" content="Tweet from WHO" />
         <meta property="og:description" content="プロフ作りました" />
-        <meta property="og:image" content="'@if(Auth::check()) {{ asset('logo/'.$user->logo) }} @endif'" />
+        <meta property="og:image" content="{{ asset('logo/'.$sample_user->logo) }}" />
         {{--<meta property="og:image" content="'@if(Auth::check()) {{ asset('logo/user1.png') }} @endif'" />--}}
 
         {{--<meta name="twitter:card" content="summary" />--}}
