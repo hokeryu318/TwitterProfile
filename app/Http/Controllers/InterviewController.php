@@ -41,7 +41,7 @@ class InterviewController extends Controller
             foreach($arr_id as $key => $id) {
                 if($id == 0) {//insert
                     $query_insert = new query();
-                    $query_insert->send_user_id = Auth::id();;
+                    $query_insert->send_user_id = Auth::id();
                     $query_insert->receive_user_id = Auth::id();
                     $query_insert->query = $arr_query[$key];
                     $query_insert->answer = $arr_answer[$key];

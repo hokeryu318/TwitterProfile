@@ -25,7 +25,6 @@ class SocialAuthTwitterController extends Controller
 
     public function callback($provider)
     {
-               
         $getInfo = Socialite::driver($provider)->user();
          
         $user = $this->register_user($getInfo, $provider);

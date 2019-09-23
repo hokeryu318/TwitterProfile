@@ -34,7 +34,8 @@ class QueryController extends Controller
 
     public function query_post(Request $request)
     {
-        $user_id = $request->session()->get('user_id');
+//        $user_id = $request->session()->get('user_id');
+        $user_id = Auth::id();
         $sample_user_id = $request->sample_user_id;
         $query = $request->new_query;
 
