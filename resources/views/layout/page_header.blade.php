@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    @if(url()->current().contains == 'query_view')
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@jiuhejong" />
         <meta name="twitter:creator" content="@jiuhejong" }} />
@@ -12,6 +13,7 @@
         <meta property="og:title" content="Tweet from WHO" />
         <meta property="og:description" content="プロフ作りました" />
         <meta property="og:image" content="{{ asset('logo/'.$sample_user->logo) }}" />
+    @endif
         {{--<meta property="og:image" content="'@if(Auth::check()) {{ asset('logo/user1.png') }} @endif'" />--}}
 
         {{--<meta name="twitter:card" content="summary" />--}}
