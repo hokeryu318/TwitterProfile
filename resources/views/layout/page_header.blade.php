@@ -7,8 +7,8 @@
 
     @if(Route::currentRouteName() == 'query_sample')
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@jiuhejong" />
-        <meta name="twitter:creator" content="@jiuhejong" }} />
+        <meta name="twitter:site" content="@"{{ $sample_user->name }} />
+        <meta name="twitter:creator" content="@"{{ $sample_user->name }} />
         <meta property="og:url" content="{{ $sample_user->url }}" />
         <meta property="og:title" content="Tweet from WHO" />
         <meta property="og:description" content="プロフ作りました" />
