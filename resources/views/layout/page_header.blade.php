@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@{{ $sample_user->name }}" />
-        <meta name="twitter:creator" content="@{{ $sample_user->name }}" />
+        <meta name="twitter:site" content="@"{{ $sample_user->name }} />
+        <meta name="twitter:creator" content="@"{{ $sample_user->name }} />
         <meta property="og:url" content="{{ $sample_user->url }}" />
         <meta property="og:title" content="Tweet from WHO" />
         <meta property="og:description" content="プロフ作りました" />
