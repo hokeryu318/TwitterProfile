@@ -122,6 +122,7 @@
         elem.value = user.url;
         elem.select();
         document.execCommand("copy");
+        document.body.removeChild(elem);
 
         $.ajax({
             type:"GET",
