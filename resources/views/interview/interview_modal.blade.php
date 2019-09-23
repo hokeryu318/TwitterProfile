@@ -5,7 +5,7 @@
         <div class="modal-header" style="border-bottom: 0px;">
             <div class="col-sm-2"></div>
             <div class="col-sm-8" align="center">
-                <img src="{{ $user->logo }}" style="width: 50px;border-radius:50%;">
+                <img src="{{ asset('logo/'.$user->logo) }}" style="width: 50px;border-radius:50%;">
             </div>
             <div class="col-sm-2"></div>
         </div>

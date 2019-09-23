@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="" />
+    <list default="true" id="83804e2e-c960-499d-b7fc-629655921606" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/twittlogin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/twittlogin.blade.php" afterDir="false" />
+    </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,13 +124,13 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="6" />
           <entry key="json" value="3" />
-          <entry key="php" value="29509" />
+          <entry key="php" value="29525" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="18316" />
+          <entry key="Blade" value="18332" />
           <entry key="CSS" value="3062" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="3" />
@@ -178,8 +180,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+            <state relative-caret-position="504">
+              <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
               </folding>
@@ -240,7 +242,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>col-sm-4</find>
       <find>sp-20</find>
       <find>adver</find>
       <find>interview_top</find>
@@ -270,6 +271,7 @@
       <find>auth::id</find>
       <find>showlogin</find>
       <find>get</find>
+      <find>-&gt;logo</find>
     </findStrings>
     <replaceStrings>
       <replace>fs-15</replace>
@@ -611,12 +613,12 @@
       <workItem from="1568253690168" duration="112728000" />
       <workItem from="1568452802782" duration="88142000" />
       <workItem from="1568955535489" duration="64012000" />
-      <workItem from="1569053819760" duration="79059000" />
+      <workItem from="1569053819760" duration="79215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="551630000" />
+    <option name="totallyTimeSpent" value="551786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,7 +631,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="26" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.21332519" />
@@ -1090,8 +1091,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        <state relative-caret-position="504">
+          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
           </folding>

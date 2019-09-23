@@ -21,7 +21,7 @@
             <div id="user_data">
                 <div class="sp-20"></div>
                 <div class="ib vm" style="width: 30%;">
-                    <img src="{{ $sample_user->logo }}" style="width: 70px;border-radius:50%;">
+                    <img src="{{ asset('logo/'.$sample_user->logo) }}" style="width: 70px;border-radius:50%;">
                 </div>
                 <div class="ib vm" style="width: 1%;"></div>
                 <div class="ib vm" style="width: 40%;">
@@ -37,7 +37,7 @@
                     <div class="sp-40"></div>
                     <div class="border_bottom">
                         <div align="left">
-                            <img class="vm" src="{{ $sample_user->logo }}" style="width: 30px;border-radius:50%;">
+                            <img class="vm" src="{{ asset('logo/'.$sample_user->logo) }}" style="width: 30px;border-radius:50%;">
                             <span class="vm fs-15" style="word-break: break-all;">{{ $query->query }}</span>
                         </div>
                         <div class="sp-20"></div>

@@ -16,7 +16,7 @@
                 <div class="sp-20"></div>
                 <div class="interview_top">
                     <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: -6%;">
-                        <img src="{{ $user->logo }}" class="avatar" />
+                        <img src="{{ asset('logo/'.$user->logo) }}" class="avatar" />
                         <div class="query_collect" onclick="interview_modal(1)">質問を募集</div>
                     </div>
                     <div class="ib vm" style="width: 1%;"></div>
@@ -49,7 +49,7 @@
                         <div class="sp-20"></div>
                         <div class="border_bottom">
                             <div class="ib vm" style="margin-top: 25px;">
-                                <img src="{{ $receive->logo }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($receive->send_user_id)) }}'">
+                                <img src="{{ asset('logo/'.$receive->logo) }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($receive->send_user_id)) }}'">
                             </div>
                             <div class="ib vm" style="width: 80%;">
                                 <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 200px;" onclick="remove_query({{ $receive->id }})">
@@ -120,7 +120,7 @@
                             <div class="sp-20"></div>
                             <div class="border_bottom">
                                 <div class="ib vm" style="margin-top: 25px;">
-                                    <img src="{{ $send->logo }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($send->receive_user_id)) }}'">
+                                    <img src="{{ asset('logo/'.$send->logo) }}" style="width: 35px;border-radius:50%;" onclick="window.location='{{ url("query_view/".md5($send->receive_user_id)) }}'">
                                 </div>
                                 <div class="ib vm" style="width: 80%;">
                                     <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 200px;" onclick="remove_query({{ $send->id }})">

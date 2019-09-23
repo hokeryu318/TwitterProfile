@@ -11,8 +11,8 @@
         <meta property="og:url" content="'@if(Auth::check()) {{ $user->url }} @endif'" />
         <meta property="og:title" content="Tweet from WHO" />
         <meta property="og:description" content="プロフ作りました" />
-{{--        <meta property="og:image" content="'@if(Auth::check()) {{ $user->logo }} @endif'" />--}}
-        <meta property="og:image" content="'@if(Auth::check()) {{ asset('logo/user1.png') }} @endif'" />
+        <meta property="og:image" content="'@if(Auth::check()) {{ asset('logo/'.$user->logo) }} @endif'" />
+        {{--<meta property="og:image" content="'@if(Auth::check()) {{ asset('logo/user1.png') }} @endif'" />--}}
 
         {{--<meta name="twitter:card" content="summary" />--}}
         {{--<meta name="twitter:site" content="@jiuhejong" />--}}
@@ -57,7 +57,7 @@
                                 </p>
                             </span>
                             {{--@if(isset($user))--}}
-                            <span><img src="{{ $user->logo }}" style="width:30px;margin-top: -9px;border-radius: 50%;"></span>
+                            <span><img src="{{ asset('logo/'.$user->logo) }}" style="width:30px;margin-top: -9px;border-radius: 50%;"></span>
                             {{--@endif--}}
                             <span onclick="openNav()" class="menu_none">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

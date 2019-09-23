@@ -18,7 +18,7 @@
                 <div class="sp-20"></div>
                 <div class="interview_top" style="opacity: 0.2;">
                     <div class="ib vm" style="width: 30%;margin-top: 25px;margin-bottom: 15px;margin-left: 9%;">
-                        <img src="{{ $user->logo }}" class="avatar" />
+                        <img src="{{ asset('logo/'.$user->logo) }}" class="avatar" />
                         <div class="query_collect">質問を募集</div>
                     </div>
                     <div class="ib vm" style="width: 1%;"></div>
@@ -57,7 +57,7 @@
                                     <img src="{{ asset('img/close.png') }}" style="width: 22px;margin-left: 270px;" onclick="remove_query({{ $query->id }})">
                                     <div class="border_bottom1">
                                         <div align="left">
-                                            <img class="vm" src="{{ $query->logo }}" style="width: 30px;border-radius:50%;">
+                                            <img class="vm" src="{{ asset('logo/'.$query->logo) }}" style="width: 30px;border-radius:50%;">
                                             <input type="text" class="fs-15 add_it_input query-text" value="{{ $query->query }}" name="query_text[]" />
                                             <input type="hidden" class="query-id" value="{{ $query->id }}" name="query_id[]"/>
                                         </div>
@@ -101,7 +101,7 @@
     <div class="sp-40"></div>
     <div class="border_bottom1">
         <div align="left">
-            <img class="vm" src="{{ $user->logo }}" style="width: 30px;border-radius: 50%;">
+            <img class="vm" src="{{ asset('logo/'.$user->logo) }}" style="width: 30px;border-radius: 50%;">
             <input type="text" class="fs-15 add_it_input query-text" value="" name="query_text[]" />
             <input type="hidden" class="query-id" value="0" name="query_id[]"/>
         </div>
